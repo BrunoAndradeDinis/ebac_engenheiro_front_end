@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+
+<body>
+  <header>
+    <h1>Formulários</h1>
+    <nav>
+      <a href="./index.html">Ir para página inicial</a>
+    </nav>
+  </header>
+  <main>
+    <form action="#">
+      <label for="nome">Nome</label>
+      <input type="text" placeholder="Seu nome" id="nome">
+      <hr />
+      <label for="email">E-mail</label>
+      <input type="email" placeholder="Email" id="email">
+      <hr />
+      <label for="telefone">Telefone</label>
+      <input type="tel" name="telefone" id="telefone" placeholder="(16)94002-8922">
+      <hr />
+      <label for="numero">Número</label>
+      <input type="number" name="numero" id="numero" max="1000" min="2" step="2">
+      <hr />
+      <label for="arquivo">Arquivo</label>
+      <input type="file" name="" id="arquivo">
+      <hr />
+      <label for="cores">Cor</label>
+      <input type="color" name="" id="cores">
+      <hr />
+      <label for="caixa">Caixa checkbox</label>
+      <input type="checkbox" name="" id="caixa">
+      <hr />
+      <p>Qual sua cor favorita?</p>
+      <input type="radio" name="cor-favorita" id="vermelho" checked><label for="vermelho">vermelho</label>
+      <input type="radio" name="cor-favorita" id="verde"><label for="verde">verde</label>
+      <input type="radio" name="cor-favorita" id="azul"><label for="azul">azul</label>
+      <hr />
+      <label for="filme">Qual o seu filme favorito?</label>
+      <select name="filme" id="filme">
+        <option value="filme1">Filme a</option>
+        <option value="filme2">Filme b </option>
+        <option value="filme3">Filme c</option>
+        <option value="opcao" selected disabled>Selecione um filme</option>
+      </select>
+      <hr />
+      <textarea name="" id="caixa-texto-grande"></textarea>
+      <hr />
+      <button type="submit">Enviar formulario</button>
+      <button type="reset">Limpar</button>
+    </form>
+  </main>
+</body>
+
+</html>

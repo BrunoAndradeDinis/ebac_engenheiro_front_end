@@ -1,0 +1,29 @@
+- O que é HTML: 
+O HTML (HyperText Markup Language) - Linguagem de Marcação de Hipertexto, um hipertexto é um texto usado para fazer referência a outros textos, enquanto uma linguagem de marcação é composta por uma série de marcações que dizem para os servidores da web qual é o estilo e a estrutura de um documento.
+
+E para o que serve o HTML? 
+O HTML não é considerado uma linguagem  de programação, já que ele por si só não é capaz de criar funcionalidades dinâmicas. Ao invés disso, com o HTML, os usuários podem criar e estruturar seções, páragrafos, links e muito mais usando elementos, tags e atributos, isso tudo sendo utilizado para estruturar e definir o conteúdo de uma página web. 
+
+
+- O que é CSS:
+CSS  é a sigla pra cascading style sheet, folhas de estilo em cascata.
+
+A estilização respeita uma ordem de menor pra maior importância, por isso o “cascata” no nome. 
+
+E para o que serve o CSS?
+
+Ele deixa visivelmente mais bonito, estilizando o HTML para uma forma mais confortável e chamativa.
+
+
+- O que é JavaScript:
+JavaScript ou JS é uma linguagem de programação projetada para escrever as partes de Front-end (lado do cliente) e Back-end (lado do servidor) dos sites e aplicativos. É uma linguagem de alto nível, legível por humanos, mas que não necessita de um compilador para traduzi-la para a linguagem de máquina. O código é interpretado e executado diretamente em um navegador web, o que facilita e acelera a interação com o usuário.
+
+E para o que serve o JavaScript?
+
+A linguagem permite que sejam adicionadas muitas funcionalidades às páginas web, fazendo com que elas fiquem mais interativas, úteis e atrativas para o usuário. Alguns exemplos de conteúdo dinâmico são os menus suspensos, os formulários, as galerias de fotos, os gráficos animados, entre outros.
+
+- Qual a importância deles na construção de páginas:
+
+As três linguagens funcionam em conjunto para criar uma experiência de usuário positiva em qualquer site. Embora HTML e CSS sejam capazes de manipular principalmente conteúdo estático, também podem promover integração com o código em JavaScript do lado do cliente para atualizar o conteúdo dinamicamente.
+
+Por exemplo, o bloco de código de script em uma página HTML pode conter JavaScript. Em seguida, o navegador pode processar o código em HTML e o código interno em JavaScript quando a página em HTML for carregada.

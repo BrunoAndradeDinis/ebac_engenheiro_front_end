@@ -1,0 +1,6 @@
+# Ignorar pastas chamadas download ou downloads
+download/
+downloads/
+
+# Ignorar arquivos .pdf
+*.pdf
