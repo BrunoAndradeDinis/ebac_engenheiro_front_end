@@ -12,6 +12,7 @@ campoB.addEventListener('change', ()=>{
 
   if(valor1 > valor2 || valor1 === valor2){
     document.querySelector('.error-message').style.display = 'block'
+    retorno.style.display = "none"
     return
   } else {
     document.querySelector('.error-message').style.display = 'none'
@@ -28,9 +29,10 @@ form.addEventListener('submit', (e)=>{
   if(valor1 < valor2){
     retorno.innerHTML = `O Campo B: ${valor2} é maior que o Campo A: ${valor1}`
     document.querySelector('.error-message').style.display = 'none'
+    retorno.style.display = "block"
   } else {
     document.querySelector('.error-message').style.display = 'block'
-    retorno.innerHTML = ""
+    retorno.style.display = 'none'
     return
   }
 

@@ -1,0 +1,115 @@
+/* 
+  #5c58b6
+  #b957ce
+  #5994ce
+  #3a4e93
+  #f2f2f2
+  #c0c0c0
+*/
+
+:root{
+  --fundo: #f2f2f2;
+  --texto1: #3a4e93;
+  --texto2: #c0c0c0;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: .3s ease-in-out;
+
+}
+
+body{
+  background-color: var(--fundo);
+  color: var(--texto1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cabecalho{
+  display: flex;
+  margin: 2rem;
+  justify-content: center;
+}
+
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 60vh;
+}
+
+.principal .formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  gap: 1rem;
+}
+
+
+
+.principal .formulario .botao{
+  width: 60%;
+  padding: .5rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--texto1);
+  color: var(--fundo);
+}
+
+.principal .formulario .entradas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0;
+  width: 40vw;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.principal .formulario .entradas div {
+  margin: 1rem 0;
+  
+}
+
+.principal .formulario .entradas div input {
+  width: 30vw;
+  padding: .5rem
+}
+
+.principal .formulario .entradas .error-message {
+  display: none;
+  color: var(--texto1);
+  position: absolute;
+}
+
+.principal .formulario .entradas div input:focus{
+  outline-color: var(--texto1);
+}
+
+.principal .formulario .botao:hover{
+  background-color: #5d58b6c9;
+}
+
+.sucess-message{
+  display: none;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: var(--texto1);
+  color: var(--fundo);
+  height: 3rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
