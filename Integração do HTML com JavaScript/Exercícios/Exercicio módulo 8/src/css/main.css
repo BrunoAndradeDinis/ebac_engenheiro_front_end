@@ -103,13 +103,22 @@ th, td {
   padding: 12px;
   text-align: left;
   font-size: var(--font-medium);
+  
 }
 
 th {
   background-color: var(--table-bg-color);
   font-weight: bold;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
 }
 
 tr {
   border-bottom: 1px solid var(--table-bg-color);
+}
+
+tr:has(td):hover{
+  background-color: var(--shadow-color);
+  cursor: pointer;
+  transition: .3s ease;
 }
