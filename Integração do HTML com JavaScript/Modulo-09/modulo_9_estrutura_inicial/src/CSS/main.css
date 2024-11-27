@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --text-color-1: #fff;
+  --bg-color-1: #5f27cd;
+  --bg-color-2: #c8d6e5;
+  --border-color-1: #341f97;
+  --bg-button-default: #009432;
+  --bg-button-danger: #c6130a;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-style: italic;
+  color: var(--text-color-1);
+  background-color: var(--bg-color-1);
+  border-bottom: 1rem solid var(--border-color-1);
+}
+
+header button {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 1rem;
+}
+
+header .logo {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+header button img {
+  height: 1.12rem;
+  margin-right: 0.5rem;
+}
+
+form {
+  background-color: var(--bg-color-2);
+  padding: 1.5rem 0;
+  text-align: center;
+  display: none;
+}
+
+form h2 {
+  margin-bottom: 1rem;
+}
+
+input,
+button {
+  padding: 0.5rem;
+}
+
+button {
+  background-color: var(--bg-button-default);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-color-1);
+}
+
+#botao-cancelar {
+  background-color: var(--bg-button-danger);
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+}
+ul li {
+  max-width: 30%;
+  position: relative;
+  max-height: 280px;
+  overflow-y: hidden;
+}
+
+ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-imagem-link {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.overlay-imagem-link a {
+  color: var(--text-color-1);
+}
+
+ul li:hover .overlay-imagem-link {
+  opacity: 1;
+}

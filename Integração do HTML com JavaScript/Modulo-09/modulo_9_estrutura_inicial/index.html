@@ -8,8 +8,7 @@
     <link rel="preconnect" href="http://fonts.googleapis.com">
     <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css">
-
+    <link rel="stylesheet" href="./src/CSS/main.css">
 </head>
 
 <body>
@@ -19,10 +18,37 @@
     </header>
     <form>
         <h2>Inserir nova imagem</h2>
-        <input type="url" required placeholder="URL da imagem">
+        <input type="url" required placeholder="URL da imagem" id="endereco-de-imagem-nova">
         <button type="submit">Adicionar</button>
-        <button type="reset">Cancelar</button>
+        <button type="reset" id="botao-cancelar">Cancelar</button>
     </form>
+
+    <ul>
+        <li>
+            <img src="./src/images/foto1.jpg" alt="Pintura aleatória">
+            <div class="overlay-imagem-link">
+                <a href="./src/images/foto1.jpg" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+
+            </div>
+        </li>
+        <li>
+            <img src="./src/images/foto2.jpg" alt="Pintura aleatória">
+            <div class="overlay-imagem-link">
+                <a href="./src/images/foto2.jpg" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+
+            </div>
+        </li>
+        <li>
+            <img src="./src/images/foto3.jpg" alt="Pintura aleatória">
+            <div class="overlay-imagem-link">
+                <a href="./src/images/foto3.jpg" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+
+            </div>
+        </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>
