@@ -23,13 +23,12 @@ function adicionaLinha() {
   const inputNomeAtividade = document.getElementById("nome-atividade");
   const inputNotaAtividade = document.getElementById("nota-atividade");
 
-  atividades.push(inputNomeAtividade.value);
-  notas.push(Number(inputNotaAtividade.value));
-
   // valida se a matéria existe ou não no array
   if (atividades.includes(inputNomeAtividade.value)) {
     alert(`A atividade: ${inputNomeAtividade.value} ja foi inserida!`);
   } else {
+    atividades.push(inputNomeAtividade.value);
+    notas.push(Number(inputNotaAtividade.value));
     // tag da linha da tabela
     let linha = "<tr>";
     linha += `<td>${inputNomeAtividade.value}</td>`;
@@ -44,6 +43,7 @@ function adicionaLinha() {
     // limpando os inputs
     inputNomeAtividade.value = "";
     inputNotaAtividade.value = "";
+    
   }
 }
 
