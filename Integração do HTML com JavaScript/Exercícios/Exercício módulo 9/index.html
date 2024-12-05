@@ -24,41 +24,19 @@
       </form>
     </section>
     <section>
-      <table>
-        <thead>
-          <tr>
-            <th>
-              Tarefas
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span>asdasdsad</span></td>
-            <td><button id="editar">✍ </button></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th>
-              Total tarefas
-            </th>
-            <th>
-              A fazer
-            </th>
-            <th>
-              Feitas
-            </th>
-          </tr>
-          <tr>
-            <td id="tarefas-total">---</td>
-            <td id="tarefas-a-fazer">---</td>
-            <td id="tarefas-feitas">---</td>
-          </tr>
-        </tfoot>
-      </table>
+      <ul id="lista-tarefas">
+        <!-- Tarefas serão inseridas aqui -->
+      </ul>
+    </section>
+    <section>
+      <div>
+        <p>Total tarefas: <strong id="tarefas-total">---</strong></p>
+        <p>A fazer: <strong id="tarefas-a-fazer">---</strong></p>
+        <p>Feitas: <strong id="tarefas-feitas">---</strong></p>
+      </div>
     </section>
   </main>
+  
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="./src/js/main.js"></script>

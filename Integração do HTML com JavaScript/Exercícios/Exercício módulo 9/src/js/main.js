@@ -7,35 +7,41 @@ $(document).ready(function () {
   formulario.on("submit", (e) => {
     e.preventDefault();
     const inputTarefa = $("#tarefa");
+    const listaTarefas = $('#lista-tarefas')
+    const novaLinha = $('<li>');
+    const celulaTarefa = $('<div>');
+    const celulaDeInteracao = $('<div>');
 
-    const novaLinha = tabela.insertRow(0);
-    const celulaTarefa = novaLinha.insertCell(0);
-    const celulaDeInteracao = novaLinha.insertCell(1);
-
+    listaTarefas.append(novaLinha)
     $(celulaTarefa).append(`<span>${inputTarefa.val()}</span>`);
     $(celulaDeInteracao).append(botaoEditar);
+
+    novaLinha.append(celulaTarefa)
+    novaLinha.append(celulaDeInteracao)
+    inputTarefa.val('')
+    inputTarefa.focus()
 
     atualizarDados();
   });
 
   // evento de "riscar" a tarefa
-  $("table").on("click", "td span", function () {
-    let tr = $(this).closest("tr");
+  $("ul").on("click", "div span", function () {
+    let li = $(this).closest("li");
 
     $(this).toggleClass("line-through");
 
     $(this).hasClass("line-through")
-      ? tr.find("button").attr("id", "excluir").text("🗑️")
-      : tr.find("button").attr("id", "editar").text("✍");
+      ? li.find("button").attr("id", "excluir").text("🗑️")
+      : li.find("button").attr("id", "editar").text("✍");
 
     atualizarDados();
   });
 
   // evento de editar a tarefa
-  $("table").on("click", "#editar", function () {
+  $("ul").on("click", "#editar", function () {
     let button = $(this);
-    let td = button.closest("td");
-    let span = td.siblings("td").find("span"); // .siblings para pegar a td que tem o span
+    let div = button.closest("div");
+    let span = div.siblings("div").find("span"); // .siblings para pegar a td que tem o span
     let input = $("<input>").val(span.text()); // criação de um input com o texto do span
 
     button.attr("id") === "editar"
@@ -48,10 +54,10 @@ $(document).ready(function () {
   });
 
   //evento de salvar a edição de tarefa
-  $("table").on("click", "#salvar", function () {
+  $("ul").on("click", "#salvar", function () {
     let button = $(this);
-    let td = button.closest("td");
-    let input = td.siblings("td").find("input");
+    let td = button.closest("div");
+    let input = td.siblings("div").find("input");
     let texto = input.val();
     let span = $("<span>").text(texto);
 
@@ -61,13 +67,13 @@ $(document).ready(function () {
   });
 
   // evento de excluir a tarefa
-  $("table").on("click", "#excluir", function () {
+  $("ul").on("click", "#excluir", function () {
     let button = $(this);
-    let td = button.closest("td");
-    let tr = button.closest("tr");
-    let span = td.siblings("td").find("span");
+    let div = button.closest("div");
+    let li = button.closest("li");
+    let span = div.siblings("div").find("span");
 
-    tr.remove();
+    li.remove();
     atualizarDados();
   });
   atualizarDados();
