@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do-List</title>
+  <style>
+    .line-through {
+      text-decoration: line-through;
+    }
+  </style>
 </head>
 
 <body>
@@ -28,6 +33,10 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td><span>asdasdsad</span></td>
+            <td><button id="editar">✍ </button></td>
+          </tr>
         </tbody>
         <tfoot>
           <tr>
@@ -38,13 +47,13 @@
               A fazer
             </th>
             <th>
-             Feitas
+              Feitas
             </th>
           </tr>
           <tr>
-            <td>---</td>
-            <td>---</td>
-            <td>---</td>
+            <td id="tarefas-total">---</td>
+            <td id="tarefas-a-fazer">---</td>
+            <td id="tarefas-feitas">---</td>
           </tr>
         </tfoot>
       </table>
