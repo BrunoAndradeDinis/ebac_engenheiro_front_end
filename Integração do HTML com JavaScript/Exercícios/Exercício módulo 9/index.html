@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do-List</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>To-Do-List</h1>
+    </header>
+    <section>
+      <form>
+        <input type="text" name="tarefa" id="tarefa">
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+    <section>
+      <ul id="lista-tarefas">
+        <!-- Tarefas serão inseridas aqui -->
+      </ul>
+    </section>
+    <section>
+      <div>
+        <p>Total tarefas: <strong id="tarefas-total">---</strong></p>
+        <p>A fazer: <strong id="tarefas-a-fazer">---</strong></p>
+        <p>Feitas: <strong id="tarefas-feitas">---</strong></p>
+      </div>
+    </section>
+  </main>
+  
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>
