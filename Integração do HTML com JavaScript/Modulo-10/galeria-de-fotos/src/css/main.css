@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #192a56;
+    padding: 16px 0 0 0;
+    color: #fff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > div.container, footer > div.container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 1rem 0;
+}
+
+header div div.menu-hamburguer{
+    width: 2rem; ;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s ease-in-out;
+    gap: .15rem;
+}
+
+header div div.menu-hamburguer:hover{
+    cursor: pointer;
+    transform: scale(.95);
+    opacity: .7;
+}
+
+header div div.menu-hamburguer span{
+    height: 3px;
+    width: 100%;
+    background-color: orange;
+    margin-bottom: 4px;
+    display: block;
+    border-radius: 4px;
+}
+
+header div div.menu-hamburguer span:nth-child(2){
+    width: 70%;
+    background-color: brown;
+}
+
+nav {
+    background-color: #575fcf;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container-flex {
+    display: flex;
+}
+#sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
+}  
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
+.lista-veiculos {
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.lista-veiculos li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 1.5rem;
+}
+
+.lista-veiculos li img {
+    max-width: 100%;
+}
+
+.lista-veiculos li h3{
+    margin: 1rem;
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: .5rem 0;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #119759;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.lista-veiculos li strong, .price{
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+.price del {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.form-campo{
+    margin-bottom: 1rem;
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input, .form-campo textarea{
+    width: 100%;
+    display: block;
+    padding: .5rem;
+}
+
+.form-campo textarea{
+    resize: none;
+    height: 8rem;
+}
+
+form {
+    max-width: 22.5rem;
+}
+
+form button {
+    max-width: 7.5rem;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+footer li img {
+    height: 2rem;
+}
