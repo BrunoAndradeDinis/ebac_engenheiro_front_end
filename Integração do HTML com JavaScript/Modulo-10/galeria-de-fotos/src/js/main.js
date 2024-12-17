@@ -42,7 +42,8 @@ $(document).ready(function () {
       mensagem: 'Precisamos que mande ao menos uma mensagem!',
     },
     submitHandler: function(form){
-      console.log(form)
+      alert.log('Cadastro realizado com sucesso!')
+      $('form').reset()
     },
     invalidHandler: function(evento, validador){
       let camposIncorretos = validador.numberOfInvalids()
