@@ -1,6 +1,8 @@
 # Ignorar pastas chamadas download ou downloads
 download/
 downloads/
+.vscode/
+.vscode
 
 # Ignorar arquivos .pdf
 *.pdf

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livrins</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/013/993/970/non_2x/illustration-of-a-book-with-a-red-cover-free-png.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="z-3" id="cabecalho">
+    <div class="d-flex flex-wrap justify-content-center p-3">
+
+      <div class="d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis ps-4">
+        <a href="/" class="text-decoration-none ">
+          <h1 class="text-light">Livrins</h1>
+        </a>
+
+      </div>
+
+
+      <div class="navbar p-2">
+        <div class="container ">
+          <nav class="justify-content-end" id="">
+            <ul class="nav nav-underline ">
+              <li class="nav-item ">
+                <a href="#inicio" class="nav-link active text-light" aria-current="page">Início</a>
+              </li>
+              <li class="nav-item">
+                <a href="#livros" class="nav-link text-light">Livros</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main data-bs-spy="scroll" data-bs-target="#cabecalho">
+
+    <!-- Carousel de imagens dos livros -->
+    <section id="inicio">
+      <div class="carousel carousel-fade slide" data-bs-ride="carousel" id="carousel-livrins">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img class="d-block w-100" src="./src/img/silvestra-capa-lg.jpg" alt="Capa ilustrativa do livro - Silvestre">
+            <div class="carousel-caption">
+              <h2 class="">Silvestre</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/dementia-capa-lg.jpg" alt="Capa ilustrativa do livro - Dementia" data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="">Dementia</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/caligari-capa-lg.jpg" alt="Capa ilustrativa do livro - Caligari " data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">Caligari</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/sandman-capa-lg.jpg" alt="Capa ilustrativa do livro - Sandman" data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">Sandman</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/habibi-capa-lg.png" alt="Capa ilustrativa do livro - Habibi" data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">Habibi</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/My-Broken-Mariko-lg.jpg" alt="Capa ilustrativa do livro - My Broken Mariko" data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">My Broken Mariko</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/nana-capa-lg.jpg" alt="Capa ilustrativa do livro - Nana " data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">Nana</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/solanin-capa-lg.jpg" alt="Capa ilustrativa do livro - Solanin" data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">Solanin</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/oyasumi-punpun-capa-lg.png" alt="Capa ilustrativa do livro - Oyasumi Punpun" data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">Oyasumi Punpun</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/paradise-kiss-lg.jpg" alt="Capa ilustrativa do livro - Paradise Kiss" data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">Paradise Kiss</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/heartstopper-capa-lg.jpg" alt="Capa ilustrativa do livro - HeartStopper" data-bs-interval="3000">
+            <div class="carousel-caption">
+              <h2 class="h5">HeartStopper</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./src/img/helter-skelter-capa-lg.jpg" alt="Capa ilustrativa do livro - Helter Skelter" data-bs-interval="3000">
+            <div class="carousel-caption bg-dark">
+              <h2 class="h5">Helter Skelter</h2>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel-livrins" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel-livrins" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="0" class="active">
+
+            </button>
+            <button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="1">
+
+            </button>
+            <button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="2">
+
+            </button>
+            <button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="3">
+
+            </button><button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="4">
+
+            </button><button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="5">
+
+            </button><button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="6">
+
+            </button><button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="7">
+
+            </button><button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="8">
+
+            </button><button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="9">
+
+            </button><button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="10">
+
+            </button><button type="button" data-bs-target="#carousel-livrins" data-bs-slide-to="11">
+
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Carousel de imagens dos livros -->
+    <!-- Cards dos livros -->
+    <section id="livros">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba1-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba1-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba1-1">
+                  <img src="./src/img/silvestre-capa-sm.png" alt="Capa do livro - Silvestre">
+                  <div class="card-body">
+                    <h4 class="card-title">Silvestre</h4>
+                    <h6 class="card-subtitle fst-italic"> Wagner Willian</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba1-2">
+                  <div class="card-content">
+                    <p class="p-2">Em 1845 o escritor norte-americano Henry David Thoreau retirou-se para a floresta, onde ergueu, com as próprias mãos, sua nova casa e a mobília, com o intuito de viver com o mínimo necessário e em total contato com a natureza. O que o moveu foi a necessidade de procurar entender as mudanças pela qual a sociedade da época passava, bem como investigar as necessidades essenciais da vida. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>12/12/2019</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4 ">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba2-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba2-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba2-1">
+                  <img src="./src/img/dementia-capa-sm.jpg" alt="Capa do livro - Dementia">
+                  <div class="card-body">
+                    <h4 class="card-title">Dementia</h4>
+                    <h6 class="card-subtitle fst-italic">Shintaro Kago</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba2-2">
+                  <div class="card-content">
+                    <p class="p-2">Yukie Sakai é uma jovem e alegre auxiliar de saúde domiciliar ansiosa para ajudar seus clientes idosos. Mas o que parece ser um trabalho simples rapidamente se transforma em uma série de aventuras cada vez mais surreais e bizarras que colocam a inteligência de Yukie à prova! O cartunista Kago, que é bem conhecido por combinar um estilo de mangá mais tradicional com uma técnica de ilustração hiper-realista. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>18/09/2012</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba3-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba3-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba3-1">
+                  <img src="./src/img/caligari-capa-sm.jpg" alt="Capa do livro - Caligari">
+                  <div class="card-body">
+                    <h4 class="card-title">Caligari</h4>
+                    <h6 class="card-subtitle fst-italic">Alexandre Teles</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba3-2">
+                  <div class="card-content">
+                    <p class="p-2">Um dos primeiros filmes de terror da história, O gabinete do doutor Caligari (1920), de Robert Wiene, é considerado a base do cinema noir e dos thrillers psicológicos. Com suas ruas entrecortadas, construções cubistas e personagens de olhares fugazes e delirantes, o filme inaugura uma nova estética no cinema, extremamente influente nas artes gráficas em geral. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>16/12/2019</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba4-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba4-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba4-1">
+                  <img src="./src/img/sandman-capa-sm.jpg" alt="Capa do livro - Sandman">
+                  <div class="card-body">
+                    <h4 class="card-title">Sandman</h4>
+                    <h6 class="card-subtitle fst-italic">Neil Gaiman</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba4-2">
+                  <div class="card-content">
+                    <p class="p-2">A série transcendental SANDMAN do autor best-seller do New York Times Neil Gaiman é frequentemente aclamada como o título definitivo da Vertigo e uma das melhores realizações em narrativa gráfica. Gaiman criou um conto inesquecível das forças que existem além da vida e da morte ao tecer mitologia antiga, folclore e contos de fadas com sua própria visão narrativa distinta. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>01/10/1990</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba5-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba5-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba5-1">
+                  <img src="./src/img/habibi-capa-sm.jpg" alt="Capa do livro - Habibi">
+                  <div class="card-body">
+                    <h4 class="card-title">Habibi</h4>
+                    <h6 class="card-subtitle fst-italic">Craig Thompson</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba5-2">
+                  <div class="card-content">
+                    <p class="p-2">Espalhando-se por uma paisagem épica de desertos, haréns e desordem industrial moderna, Habibi conta a história de Dodola e Zam, crianças escravas refugiadas ligadas uma à outra pelo acaso, pelas circunstâncias e pelo amor que cresce entre elas. Nós as seguimos enquanto suas vidas se desenrolam juntas e separadas; enquanto elas lutam para fazer um lugar para si mesmas em um mundo (não muito diferente do nosso). [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>01/09/2011</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba6-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba6-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba6-1">
+                  <img src="./src/img/my-broken-mariko-sm.jpg" alt="Capa do livro - My Broken Mariko">
+                  <div class="card-body">
+                    <h4 class="card-title">My Broken Mariko</h4>
+                    <h6 class="card-subtitle fst-italic">Waka Hirako</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba6-2">
+                  <div class="card-content">
+                    <p class="p-2">Shiino é uma assistente de escritório mal-humorada, mas quando sua amiga Mariko morre inesperadamente, ela fica determinada a chegar ao fundo desse mistério. Retratando a conexão comovente entre garotas, esta é uma história impressionante de irmandade e romance. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>16/12/2019</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba7-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba7-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba7-1">
+                  <img src="./src/img/Nana-capa-sm.jpg" alt="Capa do livro - Nana">
+                  <div class="card-body">
+                    <h4 class="card-title">Nana</h4>
+                    <h6 class="card-subtitle fst-italic">Ai Yazawa</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba7-2">
+                  <div class="card-content">
+                    <p class="p-2">Um encontro casual em um trem para Tóquio coloca duas garotas chamadas Nana em rota de colisão com o destino!
+
+                      Nana "Hachi" Komatsu espera que se mudar para Tóquio a ajude a ter um novo começo e deixar sua vida amorosa caprichosa para trás. Nana Osaki, que chega à cidade ao mesmo tempo, tem planos de fazer sucesso no mundo do rock'n'roll. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>15/05/2000</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba8-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba8-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba8-1">
+                  <img src="./src/img/solanin-capa-sm.jpg" alt="Capa do livro - Solanin">
+                  <div class="card-body">
+                    <h4 class="card-title">Solanin</h4>
+                    <h6 class="card-subtitle fst-italic">Inio Asano</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba8-2">
+                  <div class="card-content">
+                    <p class="p-2">Meiko Inoue é uma recém-formada que trabalha como secretária em um emprego que ela odeia. O namorado dela, Naruo, fica permanentemente no apartamento dela porque seu trabalho como ilustrador freelancer não paga o suficiente pelo aluguel. E os pais dela no interior continuam enviando caixas de vegetais que apodreceram na geladeira. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>21/10/2006</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba9-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba9-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba9-1">
+                  <img src="./src/img/oyasumi-punpun-capa-sm.jpg" alt="Capa do livro - Oyasumi Punpun">
+                  <div class="card-body">
+                    <h4 class="card-title">Oyasumi Punpun</h4>
+                    <h6 class="card-subtitle fst-italic">Inio Asano</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba9-2">
+                  <div class="card-content">
+                    <p class="p-2">Punpun Onodera é um garoto normal, que vive feliz com sua família. Um dia, Aiko Tanaka é transferida para a sua escola. Foi paixão à primeira vista!! Voltando juntos para casa, ela conta que no futuro, “a Terra vai se tornar um planeta inabitável”. É nessa hora que Punpun decide ser um cientista espacial. Porém, bem quando encontra seu objetivo na vida, a sua realidade começa a desmoronar. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>03/08/2007</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba10-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba10-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba10-1">
+                  <img src="./src/img/paradise-kiss-sm.jpg" alt="Capa do livro - Paradise kiss">
+                  <div class="card-body">
+                    <h4 class="card-title">Paradise kiss</h4>
+                    <h6 class="card-subtitle fst-italic">Ai Yazawa</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba10-2">
+                  <div class="card-content">
+                    <p class="p-2">Yukari não quer nada mais do que fazer seus pais felizes estudando muito e entrando em uma boa faculdade. Uma tarde, no entanto, ela é sequestrada por um grupo de autoproclamados especialistas em moda que se autodenominam "Paradise Kiss". Yukari de repente se vê na montanha-russa da vida do mundo da moda, guiada por George, um extraordinário esnobe da arte. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>03/12/2019</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba11-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba11-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba11-1">
+                  <img src="./src/img/heartstopper-capa-sm.jpg" alt="Capa do livro - Heartstopper">
+                  <div class="card-body">
+                    <h4 class="card-title">Heartstopper</h4>
+                    <h6 class="card-subtitle fst-italic">Alice Oseman</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba11-2">
+                  <div class="card-content">
+                    <p class="p-2">Charlie, um gay assumidamente gay e superpensador, e Nick, um jogador de rúgbi alegre e de coração mole, se conhecem em uma escola secundária britânica só para meninos. A amizade floresce rapidamente, mas poderia haver algo mais...?
+                      Charlie Spring está no 10º ano na Truham Grammar School for Boys. O ano passado não foi muito bom, mas pelo menos ele não está mais sofrendo bullying. Nick Nelson está no 11º ano e no time de rúgbi da escola. [...]
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>01/01/2018</time>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <div class="card mb-3">
+              <nav class="nav nav-tabs">
+                <button data-bs-toggle="tab" data-bs-target="#aba12-1" type="button" class="nav-link active">Capa</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba12-2" type="button" class="nav-link">Sinopse</button>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active" id="aba12-1">
+                  <img src="./src/img/helter-skelter-capa-sm.jpg" alt="Capa do livro - Helter Skelter">
+                  <div class="card-body">
+                    <h4 class="card-title">Helter Skelter</h4>
+                    <h6 class="card-subtitle fst-italic">Kyōko Okazaki</h6>
+                  </div>
+                </div>
+                <div class="tab-pane" id="aba12-2">
+                  <div class="card-content">
+                    <p class="p-2">Se você conhece a moda no Japão, deve ter visto o rosto de Liliko. Nos últimos anos, ela esteve no topo do mundo da moda, com seu rosto e corpo promovendo as maiores marcas. Mas, como todos que estão neste mundo admitem, permanecer no topo é uma batalha constante e sem fim. Sempre há novos rostos apresentados ao público.
+                    </p>
+                    <a href="#" class="btn btn-link">Leia mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                Públicado em <time>08/04/2003</time>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cards dos livros -->
+  </main>
+  <footer>
+    <div class="d-flex flex-wrap justify-content-center p-3 text-light">
+      <p>Livrins &copy; - <time>Dezembro de 2024</time> - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
