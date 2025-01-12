@@ -1,4 +1,18 @@
 $(document).ready(function () {
+
+    // evento de click no botão
+    $('.lista-veiculos button').click(function(){
+      const destino = $('#contato');
+      const nomeVeiculo = $(this).parent().find('h3').text()
+  
+      $('html').animate({
+        scrollTop: destino.offset().top
+      }, 1000)
+  
+      $('#veiculo-interesse').val(nomeVeiculo)
+    })
+    // evento de click no botão
+
   $("#carousel-images").slick({
     autoplay: true,
   });
@@ -53,14 +67,4 @@ $(document).ready(function () {
 
   /* VALIDATION JQUERY */
 
-  $('.lista-veiculos button').click(function(){
-    const destino = $('#contato');
-    const nomeVeiculo = $(this).parent().find('h3').text()
-
-    $('html').animate({
-      scrollTop: destino.offset().top
-    }, 1000)
-
-    $('#veiculo-interesse').val(nomeVeiculo)
-  })
 });
