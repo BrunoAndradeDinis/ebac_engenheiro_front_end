@@ -1,16 +1,17 @@
-$corPrincipal: blue;
-$corTitulo: antiquewhite;
-$corSecundaria: #090909;
+@use 'config/cores';
+@use 'config/reset';
+@use 'secoes/produtos';
+
 
 body{
-  background-color: $corPrincipal;
+  background-color: cores.$corPrincipal;
 }
 
 header{
-  background-color: $corPrincipal;
+  background-color: cores.$corPrincipal;
 
   h1{
-    color: $corTitulo;
+    color: cores.$corTitulo;
     border: 1px solid #c1c1c1;
     border-radius: .5rem;
     padding: .5rem;
@@ -19,8 +20,8 @@ header{
 
 button{
   padding: 1rem;
-  color: $corTitulo;
-  background-color: $corSecundaria;
+  color: cores.$corTitulo;
+  background-color: cores.$corSecundaria;
   border-radius: .5rem;
   &.sucesso{
     background-color: green;
