@@ -1,0 +1,28 @@
+body {
+  background-color: blue;
+}
+
+header {
+  background-color: blue;
+}
+header h1 {
+  color: antiquewhite;
+  border: 1px solid #c1c1c1;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+button {
+  padding: 1rem;
+  color: antiquewhite;
+  background-color: #090909;
+  border-radius: 0.5rem;
+}
+button.sucesso {
+  background-color: green;
+}
+button:hover {
+  background-color: #c1c1c1;
+}
+
+/*# sourceMappingURL=main.css.map */
