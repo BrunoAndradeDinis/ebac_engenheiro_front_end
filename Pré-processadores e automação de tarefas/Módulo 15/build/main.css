@@ -1,39 +1,53 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
-
-.produtos {
-  background-color: green;
 }
 
 body {
-  background-color: rgb(120, 120, 236);
+  background-color: #eee;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 header {
-  background-color: rgb(120, 120, 236);
-}
-header h1 {
-  color: antiquewhite;
-  border: 1px solid #c1c1c1;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem 0;
+  background-color: yellowgreen;
+  text-align: center;
 }
 
-button {
-  padding: 1rem;
-  color: antiquewhite;
-  background-color: #090909;
-  border-radius: 0.5rem;
+.form-container {
+  height: calc(100vh - 70px);
+  background-color: orangered;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-button.sucesso {
-  background-color: green;
+.form-container form {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 40px;
 }
-button:hover {
-  background-color: #c1c1c1;
+.form-container form input {
+  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #0c0c0c;
+}
+.form-container form button {
+  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

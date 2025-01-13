@@ -1,32 +1,52 @@
-@use 'config/cores';
-@use 'config/reset';
-@use 'secoes/produtos';
+@use 'config/reset.scss';
+@use 'config/variaveis.scss';
 
+@mixin elementoForm($margin: 1rem) {
+  padding: .5rem;
+  display: block;
+  width: 100%;
+  margin-bottom: $margin;
+
+}
 
 body{
-  background-color: cores.$corPrincipal;
+  background-color: #eee;
+}
+
+.container{
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 header{
-  background-color: cores.$corPrincipal;
+  padding: 1rem 0;
+  background-color: yellowgreen;
+  text-align: center;
+}
 
-  h1{
-    color: cores.$corTitulo;
-    border: 1px solid #c1c1c1;
-    border-radius: .5rem;
-    padding: .5rem;
+.form-container{
+  height: calc(100vh - 70px);
+  background-color: orangered;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  form{
+    width: 100%;
+    max-width: 480px;
+    margin-top: 40px;
+
+    input{
+      @include elementoForm(1rem);
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #0c0c0c;
+    }
+    button{
+      @include elementoForm();
+    }
   }
 }
 
-button{
-  padding: 1rem;
-  color: cores.$corTitulo;
-  background-color: cores.$corSecundaria;
-  border-radius: .5rem;
-  &.sucesso{
-    background-color: green;
-  }
-  &:hover{
-    background-color: #c1c1c1;
-  }
-}
