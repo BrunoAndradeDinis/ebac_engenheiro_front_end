@@ -1,0 +1,105 @@
+@use './config/reset.scss';
+@use './config/variaveis.scss';
+@use 'sass:math';
+
+@function pixelToEm($alvoEmPixel, $contextoEmPixel: variaveis.$medidaPadrao){
+    @return math.div($alvoEmPixel, $contextoEmPixel)+em;
+}
+
+body {
+    background-color: variaveis.$fundoPadrao;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color:  variaveis.$fundoPrincipal;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: pixelToEm(variaveis.$medidaPadrao) 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    font-weight: bold;
+    margin-left: pixelToEm(variaveis.$medidaMedia);
+}
+
+.menu li a {
+    color:  variaveis.$colorPrincipal;
+    text-decoration: none;
+}
+
+section {
+    padding: pixelToEm(variaveis.$medidaGrande2) 0;
+
+    .container{
+        .products {
+            margin-top: pixelToEm(40px);
+            display: grid;
+            grid-template-columns: repeat(3, 32.66%);
+            column-gap: 1%;
+            row-gap: 4%;
+            width: 100%;
+
+            .product-item img {
+                width: 100%;
+                border-radius: pixelToEm(variaveis.$medidaPadrao);
+            }
+
+            .product-button {
+                display: block;
+                background-color:  variaveis.$fundoButton;
+                color: #fff;
+                text-align: center;
+                padding: pixelToEm(8px) 0;
+                border-radius: pixelToEm(8px);
+                margin-top: pixelToEm(8px);
+                text-decoration: none;
+                &:hover, &:focus {
+                    background-color:  variaveis.$fundoButtonHover;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: variaveis.$tablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: pixelToEm(variaveis.$medidaGrande);
+    }
+}

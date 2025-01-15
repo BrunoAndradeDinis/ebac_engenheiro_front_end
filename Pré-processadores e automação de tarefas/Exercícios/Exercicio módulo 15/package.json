@@ -1,0 +1,12 @@
+{
+  "name": "exercicio-modulo-15",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/main.scss build/main.css --watch",
+    "test": "test"
+  },
+  "author": "Bruno de Andrade Dinis",
+  "license": "ISC",
+  "description": ""
+}
