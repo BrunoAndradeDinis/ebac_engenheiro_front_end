@@ -1,11 +1,15 @@
 const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'))
+const sourceMaps = require('gulp-sourcemaps')
 
 function compilaSass(){
   return gulp.src('./src/styles/main.scss')
+  .pipe(sourceMaps.init())
   .pipe(sass({
-    outputStyle:'compressed'}))
-  .pipe(gulp.dest('./build/styles'))// pipe, executa na sequenci, vai encadear as funções
+    outputStyle:'compressed'})
+  )
+  .pipe(sourceMaps.write('./maps'))
+  .pipe(gulp.dest('./build/styles'))// pipe, executa na sequencia, vai encadear as funções
 }
 
 function funcaoPadrao(callback) {
@@ -33,3 +37,6 @@ function dizTchau() {
 exports.default = gulp.parallel(funcaoPadrao, dizOi);
 exports.dizOi = dizOi;
 exports.sass = compilaSass;
+exports.watch = ()=> {
+  gulp.watch('./src/styles/*.scss', {ignoreInitial: false},gulp.series(compilaSass))
+}
