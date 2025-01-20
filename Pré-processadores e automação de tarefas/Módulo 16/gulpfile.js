@@ -6,7 +6,7 @@ const obfscate = require('gulp-obfuscate')
 const imagemin = require('gulp-imagemin')
 
 function comprimeImagens(){
-  return gulp.src('./src/images/* ')
+  return gulp.src('./src/images/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./build/images'))
 }
@@ -28,33 +28,30 @@ function compilaSass(){
   .pipe(gulp.dest('./build/styles'))// pipe, executa na sequencia, vai encadear as funções
 }
 
-function funcaoPadrao(callback) {
-  setTimeout(()=>{
-    console.log("Executando via Gulp!");
+// function funcaoPadrao(callback) {
+//   setTimeout(()=>{
+//     console.log("Executando via Gulp!");
     
-    callback();
-  }, 2000)
+//     callback();
+//   }, 2000)
 
-}
+// }
 
-function dizOi(callback) {
-  setTimeout(()=>{
-    console.log("Olá Gulp!");
+// function dizOi(callback) {
+//   setTimeout(()=>{
+//     console.log("Olá Gulp!");
 
-    dizTchau();
-    callback();
-  }, 1000)
-}
+//     dizTchau();
+//     callback();
+//   }, 1000)
+// }
 
-function dizTchau() {
-  console.log("Tchau, Gulp");
-}
+// function dizTchau() {
+//   console.log("Tchau, Gulp");
+// }
 
-exports.default = gulp.parallel(funcaoPadrao, dizOi);
-exports.dizOi = dizOi;
-exports.sass = compilaSass;
-exports.watch = ()=> {
+exports.default = ()=> {
   gulp.watch('./src/styles/*.scss', {ignoreInitial: false},gulp.series(compilaSass))
+  gulp.watch('./src/scripts/*.js', {ignoreInitial: false},gulp.series(comprimeJs))
+  gulp.watch('./src/images/*', {ignoreInitial: false},gulp.series(comprimeImagens))
 }
-exports.js = comprimeJs;
-exports.images = comprimeImagens;
