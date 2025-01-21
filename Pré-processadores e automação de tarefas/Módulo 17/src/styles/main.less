@@ -1,4 +1,6 @@
-@import './variaveis.less';
+// @import './variaveis.less'; deletado
+@import './mapas.less';
+
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(max-width: 1023px)";
 
@@ -14,8 +16,8 @@
 }
 
 body{
-  background-color: @corDeFundo;
-  color: @corDosTextos;
+  background-color: #colors[backgroundColor];
+  color: #colors[textColor];
 }
 
 .container {
@@ -63,3 +65,23 @@ header{
   }
 }
 
+.social-links{
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  width: 100%;
+  margin: 0 auto;
+  li{
+    list-style: none;
+    a{
+      text-decoration: none;
+      color: #colors[textColor];
+      font-size: 2rem;
+    }
+    &:hover{
+      transform: scale(1.1);
+      transition: .3s ease;
+    }
+  }
+
+}
