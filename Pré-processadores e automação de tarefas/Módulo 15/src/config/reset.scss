@@ -1,0 +1,8 @@
+@use 'variaveis.scss';
+
+*{
+  box-sizing: border-box;
+  font-family: variaveis.$fontPrincipal;
+  margin: 0;
+  padding: 0;
+}

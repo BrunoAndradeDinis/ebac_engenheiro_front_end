@@ -1,0 +1,97 @@
+:root {
+  --bg-color: #5b070a;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color);
+}
+footer {
+  background-color: var(--bg-color);
+}
+
+h1,
+h2 {
+  font-family: "Monoton", serif;
+}
+
+section#livros {
+  padding-top: 15vh;
+}
+.carousel-item img {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+}
+
+div.card {
+  max-width: 91%;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+div.tab-pane img {
+  max-height: 350px;
+  width: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+div.tab-content {
+  min-height: 435px;
+}
+
+@media screen and (max-width: 536px) {
+  .carousel-item img {
+    height: 300px;
+  }
+  .navbar-nav {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  div.d-flex.flex-wrap div.d-flex {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  div.d-flex div.d-flex {
+    display: block;
+    width: 100%;
+  }
+
+  div.col-sm-6 {
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 1.5rem;
+    padding: 0 auto;
+  }
+}
+
+.card {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+@media screen and (min-width: 537px) and (max-width: 900px) {
+  .card {
+    width: 100%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+}

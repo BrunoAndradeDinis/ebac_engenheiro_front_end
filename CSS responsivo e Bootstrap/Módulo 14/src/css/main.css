@@ -1,0 +1,67 @@
+:root{
+  --bg-color-1: #e15f41;
+  --bg-color-2: #fff;
+  --bg-button: #ffeae6;
+}
+
+body{
+  font-family: Roboto, sans-serif;
+}
+
+.navbar{
+  background-color: var(--bg-color-1);
+}
+
+#cabecalho .nav .nav-link.active{
+  background-color: var(--bg-color-2);
+  color: var(--bg-color-1);
+}
+
+#cabecalho .nav .nav-link, .navbar-brand, .navbar-brand:hover, .nav-cardapio .nav-link.active:hover{
+  color: var(--bg-color-2);
+}
+
+.navbar-toggler {
+  background-color: var(--bg-button);
+}
+
+.section-title {
+  font-family: "Pacifico", cursive;
+}
+
+.section-title span {
+  color: var(--bg-color-1);
+}
+
+#sobre-o-restaurante, #cardapio{
+  background-color: var(--bg-button);
+}
+
+.text-colored{
+  color: var(--bg-color-1);
+}
+
+.nav-cardapio .nav-link.active, #fale-conosco button{
+  background-color: var(--bg-color-1);
+  color: var(--bg-color-2);
+}
+
+.nav-cardapio .nav-link:hover{
+  color: var(--bg-color-1);
+}
+
+.social-links li{
+  list-style: none;
+  display: inline-block;
+}
+
+.social-links li a{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel-item img{
+    height: 280px;
+  }
+
+}

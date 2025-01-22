@@ -1,6 +1,12 @@
 # Ignorar pastas chamadas download ou downloads
 download/
 downloads/
+.vscode/
+.vscode
 
 # Ignorar arquivos .pdf
 *.pdf
+
+# Ignorar o node_modules
+node_modules
+node_modules/
