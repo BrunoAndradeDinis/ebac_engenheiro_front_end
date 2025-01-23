@@ -1,12 +1,8 @@
 @import "./mapas.less";
+@import "./reset.less";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-}
 
+// Mixin para o flex
 .flex-center() {
   display: flex;
   justify-content: center;
@@ -16,23 +12,34 @@
 // Mixin dos botões estilizados
 .button-style(@bg-color, @hover-bg-color) {
   background-color: @bg-color;
-  color: #fff;
+  color: @tertiary-color;
   text-align: center;
   padding: 8px 0;
   border-radius: 8px;
-  text-decoration: none;
-
+  display: block;
   &:hover {
     background-color: @hover-bg-color;
   }
+}
+
+// Mixin para o container
+.container-style() {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.body {
+  background-color: @bg-color-body;
 }
 
 header {
   background-color: @primary-color;
   position: sticky;
   top: 0;
-
+  left: 0;
   .container {
+    .container-style();
     .flex-center();
     justify-content: space-between;
     padding: 16px 0;
@@ -44,59 +51,61 @@ header {
     li {
       font-weight: bold;
       margin-left: 24px;
-
       a {
-        color: #fff;
-        text-decoration: none;
+        color: @tertiary-color;
       }
     }
   }
 }
 
-.products {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 32.66%);
-  column-gap: 1%;
-  row-gap: 4%;
-  width: 100%;
-
-  .product-item {
-    img {
+section {
+  padding: 56px 0;
+  .container {
+    .container-style();
+    .products {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 32.66%);
+      column-gap: 1%;
+      row-gap: 4%;
       width: 100%;
-      border-radius: 16px;
-    }
 
-    h4 {
-      margin-top: 8px;
-    }
+      .product-item {
+        img {
+          width: 100%;
+          border-radius: 16px;
+        }
 
-    .product-button {
-      .button-style(@secondary-color, @hover-color);
-      margin-top: 8px;
+        h4 {
+          margin-top: 8px;
+        }
+
+        .product-button {
+          .button-style(@secondary-color, @hover-color);
+          margin-top: 8px;
+        }
+      }
     }
   }
 }
 
-
 @media @breakpointTablet {
   .container {
-      max-width: 80%;
+    max-width: 80%;
   }
 
   .products {
-      grid-template-columns: repeat(2, 48.5%);
-      column-gap: 3%;
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
   }
 }
 
 @media @breakpointMobile {
   .products {
-      display: block;
+    display: block;
 
-      .product-item {
-          margin-bottom: 32px;
-      }
+    .product-item {
+      margin-bottom: 32px;
+    }
   }
 }
-
