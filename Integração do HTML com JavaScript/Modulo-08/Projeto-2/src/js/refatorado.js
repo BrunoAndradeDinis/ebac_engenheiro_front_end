@@ -1,15 +1,26 @@
 $(document).ready(() => {
   const $form = $("#form-atividade");
+
   const imgAprovado =
     '<img src="./src/images/aprovado.png" alt="Emoji festejando Aprovado">';
   const imgReprovado =
     '<img src="./src/images/reprovado.png" alt="Emoji Decepcionado Reprovado">';
+<<<<<<< HEAD
+  const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
+  const spanReprovado = 'span class="resultado reprovado">Reprovado</span>';
+
+  const atividades = [];
+  const notas = [];
+
+=======
   const atividades = new Array();
   const notas = new Array();
   const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
   const spanReprovado = '<span class="resultado reprovado">Reprovado</span>';
   const corpoTabela = $("tbody");
+>>>>>>> 8c8470865f9afb7151536975bdf06f2221bfffad
   const notaMinima = parseInt(prompt("Digite a nota mínima: "), 10);
+  const linhas = "";
 
   let linhas = "";
   $form.on("submit", (e) => {

@@ -1,29 +1,36 @@
 // @import './variaveis.less'; deletado
-@import './mapas.less';
+@import "./mapas.less";
 
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(max-width: 1023px)";
 
-.marginBottom8{ // mixin
-  margin-bottom: .5rem;
+.marginBottom8 {
+  // mixin
+  margin-bottom: 0.5rem;
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
   background-color: #colors[backgroundColor];
   color: #colors[textColor];
 }
-
+li {
+  list-style: none;
+}
 .container {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media @breakpointTablet {
     max-width: 80%;
@@ -33,55 +40,76 @@ body{
   }
 }
 
-header{
-  padding: 1.5rem;
+header {
+  padding-bottom: 1.5rem;
 
-  .profile-avatar{
+  .profile-avatar {
     display: block;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     max-width: 100px;
     max-height: 100px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #colors[buttonColor];
   }
 }
 
-.profile-bio{
+.profile-bio {
   text-align: center;
 
   &-name {
     font-size: 1rem;
-    .marginBottom8()
+    .marginBottom8();
   }
 
-  &-subtitle{
-    font-size: .8rem;
-    .marginBottom8()
+  &-subtitle {
+    font-size: 0.8rem;
+    .marginBottom8();
   }
 
-  &-description{
-    font-size: .8rem;
-    opacity: .7;
+  &-description {
+    font-size: 0.8rem;
+    opacity: 0.7;
   }
 }
 
-.social-links{
+.social-links {
   display: flex;
   justify-content: space-between;
   max-width: 240px;
   width: 100%;
   margin: 0 auto;
-  li{
-    list-style: none;
-    a{
+  li {
+    a {
       text-decoration: none;
       color: #colors[textColor];
       font-size: 2rem;
     }
-    &:hover{
+    &:hover {
       transform: scale(1.1);
-      transition: .3s ease;
+      transition: 0.3s ease;
     }
   }
+}
 
+.projects-list {
+  margin-top: 2rem;
+  &-item {
+    a {
+      background-color: #colors[buttonColor];
+      display: block;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 30px;
+      border: 2px solid #colors[buttonColor];
+      text-decoration: none;
+      color: #colors[textColor];
+      transition: all ease .3s;
+      &:hover {
+        color: #colors[buttonColor];
+        background-color: transparent;
+      }
+    }
+  }
 }

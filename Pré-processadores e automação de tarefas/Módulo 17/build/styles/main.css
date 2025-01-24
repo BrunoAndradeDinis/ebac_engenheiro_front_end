@@ -5,16 +5,23 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body {
   background-color: #192a56;
   color: #f5f6fa;
 }
+li {
+  list-style: none;
+}
 .container {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (max-width: 1023px) {
   .container {
@@ -27,7 +34,7 @@ body {
   }
 }
 header {
-  padding: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 header .profile-avatar {
   display: block;
@@ -35,7 +42,7 @@ header .profile-avatar {
   border-radius: 50%;
   max-width: 100px;
   max-height: 100px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #0097e6;
 }
 .profile-bio {
   text-align: center;
@@ -59,9 +66,6 @@ header .profile-avatar {
   width: 100%;
   margin: 0 auto;
 }
-.social-links li {
-  list-style: none;
-}
 .social-links li a {
   text-decoration: none;
   color: #f5f6fa;
@@ -70,4 +74,24 @@ header .profile-avatar {
 .social-links li:hover {
   transform: scale(1.1);
   transition: 0.3s ease;
+}
+.projects-list {
+  margin-top: 2rem;
+}
+.projects-list-item a {
+  background-color: #0097e6;
+  display: block;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid #0097e6;
+  text-decoration: none;
+  color: #f5f6fa;
+  transition: all ease 0.3s;
+}
+.projects-list-item a:hover {
+  color: #0097e6;
+  background-color: transparent;
 }
