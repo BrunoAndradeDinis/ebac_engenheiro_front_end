@@ -10,26 +10,27 @@ module.exports = (grunt) => {
         },
       },
       production: {
-        options:{
+        options: {
           compress: true,
-
         },
         files: {
-          'main.min.css': 'main.less'
-        }
+          "main.min.css": "main.less",
+        },
       },
     },
-    sass:{
+    sass: {
       dist: {
-        options:{
-          style: "compressed"
+        options: {
+          style: "compressed",
         },
-        files:{
-          "main2.css":"main.scss"
-        }
-      }
-    }
-
+        files: {
+          "main2.css": "main.scss",
+        },
+      },
+    },
+    concurrent: {
+      target: ["OlaGrunt", "less", "sass", "tarefaDemorada"],
+    },
   });
 
   grunt.registerTask("OlaGrunt", function () {
@@ -40,9 +41,19 @@ module.exports = (grunt) => {
       done();
     }, 3000);
   });
-  
+
+  grunt.registerTask("tarefaDemorada", function () {
+    const done = this.async();
+
+    setTimeout(() => {
+      console.log("Olá eu sou a Tarefademorada!");
+      done();
+    }, 5000);
+  });
+
   grunt.loadNpmTasks("grunt-contrib-less"); // garantindo que o grunt contrib esteja carregando.
   grunt.loadNpmTasks("grunt-contrib-sass"); // garantindo que o grunt contrib esteja carregando.
+  grunt.loadNpmTasks("grunt-concurrent"); // garantindo que o grunt concurrent esteja carregando.
 
-  grunt.registerTask("default", ["less", "sass"]);
+  grunt.registerTask("default", ["concurrent"]);
 };
