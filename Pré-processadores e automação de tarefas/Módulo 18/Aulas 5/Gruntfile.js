@@ -25,17 +25,17 @@ module.exports = (grunt) => {
         tasks: ["less:development"],
       },
       html:{
-        files: ["src/index.html"],
-        tasks: ["replace:dev"]
+        files: ["src/index.html"], // acompanha todas as edições no html e assim que é editado executa a task a seguir, para que o replace sempre esteja atualizado.
+        tasks: ["replace:dev"] // através da task replace.dev
       }
     },
     replace: {
-      dev: {
+      dev: { // ambiente
         options: {
           patterns: [
             {
-              match: "ENDERECO_DO_CSS",
-              replacement: "./styles/main.css",
+              match: "ENDERECO_DO_CSS", // string que ele vai encontras
+              replacement: "./styles/main.css", // a informação que ele vai replicar
             },
           ],
         },
@@ -43,17 +43,17 @@ module.exports = (grunt) => {
           {
             expand: true,
             flatten: true,
-            src: ["src/index.html"],
-            dest: "dev/",
+            src: ["src/index.html"], // arquivo raiz, no qual onde a substituição será feita
+            dest: "dev/", // o destino no qual será enviado a replica
           },
         ],
       },
-      dist: {
+      dist: { // ambiente
         options: {
           patterns: [
             {
-              match: "ENDERECO_DO_CSS",
-              replacement: "./styles/main.min.css",
+              match: "ENDERECO_DO_CSS", // string que ele vai encontras
+              replacement: "./styles/main.min.css", // a informação que ele vai replicar
             },
           ],
         },
@@ -61,21 +61,21 @@ module.exports = (grunt) => {
           {
             expand: true,
             flatten: true,
-            src: ["prebuild/index.html"],
-            dest: "dist/",
+            src: ["prebuild/index.html"], // arquivo raiz, no qual onde a substituição será feita
+            dest: "dist/", // o destino no qual será enviado a replica
           },
         ],
       },
     },
     htmlmin: {
-      dist: {
-        options: {
-          removeComments: true,
-          collapseWhitespace: true,
+      dist: { // ambiente de produção
+        options: { 
+          removeComments: true, // remove os comentarios
+          collapseWhitespace: true, // remove os espaços em branco
         },
         files: {
-          // 1 - minificação
-          // 2 - substituição
+          // 1 - minificação - valor
+          // 2 - substituição - chave - destino para a pasta temporária
           "prebuild/index.html": "src/index.html",
         },
       },
