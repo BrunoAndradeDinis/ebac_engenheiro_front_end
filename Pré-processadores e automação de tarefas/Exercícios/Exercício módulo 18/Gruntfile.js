@@ -1,0 +1,88 @@
+module.exports = (grunt) => {
+  grunt.initConfig({
+    pkg: grunt.file.readJSON("package.json"),
+    less: {
+      development: {
+        files: {
+          "dev/styles/main.css": "src/styles/main.less",
+        },
+      },
+      production: {
+        options: {
+          compress: true,
+        },
+        files: {
+          "dist/styles/main.min.css": "src/styles/main.less",
+        },
+      },
+    },
+    watch: {
+      less: {
+        files: ["src/styles/**/*.less"],
+        tasks: ["less:development"],
+      },
+      html: {
+        files: ["src/index.html"],
+        tasks: ["replace:dev"],
+      },
+    },
+    replace: {
+      dev: {
+        options: {
+          patterns: [
+            {
+              match: "ENDERECO_CSS",
+              replacement: "./styles/main.css",
+            },
+            {
+              match: "ENDERECO_JS",
+              replacement: "../src/scripts/main.js",
+            },
+          ],
+        },
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ["src/index.html"],
+            dest: "dev/",
+          },
+        ],
+      },
+    },
+    htmlmin: {
+      dist: {
+        options: {
+          removeComents: true,
+          collapseWhitespace: true,
+        },
+        files: {
+          "prebuild/index.html": "src/index.html",
+        },
+      },
+    },
+    clean: ["prebuild"],
+    uglify: {
+      target: {
+        files: {
+          // 1 - minificação
+          // 2 - substituição
+          "dist/scripts/main.min.js": "src/scripts/main.js",
+        },
+      },
+    },
+  });
+
+  // carregando as tarefas do Grunt necessárias
+  grunt.loadNpmTasks("grunt-contrib-less");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-replace");
+  grunt.loadNpmTasks("grunt-contrib-htmlmin");
+  grunt.loadNpmTasks("grunt-contrib-clean");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+
+  // registros das tarefas
+  grunt.registerTask("default", ["watch"]);
+
+  // grunt.registerTask("")
+};
