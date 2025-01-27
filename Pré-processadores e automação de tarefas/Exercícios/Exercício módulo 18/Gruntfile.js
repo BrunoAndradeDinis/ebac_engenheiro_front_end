@@ -49,6 +49,28 @@ module.exports = (grunt) => {
           },
         ],
       },
+      dist: {
+        options: {
+          patterns: [
+            {
+              match: "ENDERECO_CSS",
+              replacement: "./styles/main.min.css",
+            },
+            {
+              match: "ENDERECO_JS",
+              replacement: "./scripts/main.min.js",
+            },
+          ],
+        },
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ["src/index.html"],
+            dest: "dist/",
+          },
+        ],
+      },
     },
     htmlmin: {
       dist: {
@@ -84,5 +106,5 @@ module.exports = (grunt) => {
   // registros das tarefas
   grunt.registerTask("default", ["watch"]);
 
-  // grunt.registerTask("")
+  grunt.registerTask("build", ["less:production", "htmlmin:dist", "replace:dist", "clean", "uglify"])
 };
