@@ -3,6 +3,8 @@ download/
 downloads/
 .vscode/
 .vscode
+docs
+docs/
 
 # Ignorar arquivos .pdf
 *.pdf
