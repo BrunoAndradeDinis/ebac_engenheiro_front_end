@@ -1,5 +1,5 @@
 // Funções
-let nome = "Bruno"
+const nome = "Bruno"
 
 function dizOi() {
     console.log(`Olá ${nome}`)
@@ -14,7 +14,7 @@ ola("Bruno")
 
 
 function calcularIdade(anoNascimento) {
-    let idade = 2023 - anoNascimento;
+    const idade = 2023 - anoNascimento;
     return idade;
 }
 console.log(`Você tem ${calcularIdade(1990)} anos`)
