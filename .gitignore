@@ -6,6 +6,8 @@ downloads/
 
 # Ignorar arquivos .pdf
 *.pdf
+docs
+docs/
 
 # Ignorar o node_modules
 node_modules
