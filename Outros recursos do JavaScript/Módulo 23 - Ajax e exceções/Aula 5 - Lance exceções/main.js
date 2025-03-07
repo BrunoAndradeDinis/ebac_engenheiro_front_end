@@ -32,4 +32,12 @@ $(document).ready(function () {
         }, 500);
       });
   });
+
+  $("#formulario-pedido").submit(function(evento){
+    evento.preventDefault()
+
+    if($("#nome").val().length == 0){
+      throw new Error("Digite o nome!")
+    }
+  })
 });
