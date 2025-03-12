@@ -1,4 +1,4 @@
-Neste momento, você aplicará encapsulamento. Dê play na videoaula para:
-- compreender o conceito de encapsulamento na programação orientada a objetos;
-- aprender como implementar encapsulamento em JavaScript;
-- explorar os benefícios do encapsulamento.
+Neste momento, você aplicará o polimorfismo. Dê play na videoaula para:
+- compreender o conceito de polimorfismo na programação orientada a objetos;
+- aprender como aplicar o polimorfismo em JavaScript;
+- explorar os benefícios do polimorfismo na organização do código.
