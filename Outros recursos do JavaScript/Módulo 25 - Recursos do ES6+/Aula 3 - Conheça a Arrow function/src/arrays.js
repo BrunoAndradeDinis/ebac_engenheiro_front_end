@@ -1,3 +1,5 @@
+// refatorando aula anterior
+
 const redesSociais = ["Facebook", "Instagram", "Twitter"];
 
 for (let i = 0; i <= redesSociais.length; i++) {
@@ -27,15 +29,11 @@ const dobroDosNumeros = numeros.map((numero) => numero * 2);
 
 console.log(dobroDosNumeros);
 // find
-const paula = alunos2.find(function (aluno) {
-  return aluno.nome == "Paula";
-});
+const paula = alunos2.find((aluno) => aluno.nome == "Paula");
 
 console.log(paula);
 // findIndex
-const paulaIndice = alunos2.findIndex(function (aluno) {
-  return aluno.nome == "Paula";
-});
+const paulaIndice = alunos2.findIndex((aluno) => aluno.nome == "Paula");
 
 console.log(paulaIndice);
 
@@ -49,23 +47,21 @@ alunos2.push({
 }); // após adicionar o aluno o return será diferente de true todosOsAlunosSaoDeFrontEnd
 
 // every
-const todosOsAlunosSaoDeFrontEnd = alunos2.every((aluno) => {
-  return aluno.curso === "Frontend"; // true or false
-});
+const todosOsAlunosSaoDeFrontEnd = alunos2.every(
+  (aluno) => aluno.curso === "Frontend" /* true or false*/
+);
 
 console.log(todosOsAlunosSaoDeFrontEnd);
 
 // some
-const existeAlgumAlunoDeBackend = alunos2.some((aluno) => {
-  return aluno.curso === "Backend" && aluno.curso === "Frontend";
-});
+const existeAlgumAlunoDeBackend = alunos2.some(
+  (aluno) => aluno.curso === "Backend" && aluno.curso === "Frontend"
+);
 
 console.log(existeAlgumAlunoDeBackend);
 
 // filter
-function filtraAlunosDeBackend(aluno) {
-  return aluno.curso === "Backend";
-}
+const filtraAlunosDeBackend = (aluno) => aluno.curso === "Backend";
 
 const alunosDeBackend = alunos2.filter(filtraAlunosDeBackend);
 
@@ -87,13 +83,12 @@ for (let i = 0; i < nums.length; i++) {
   somaComFor += nums[i];
 }
 
-console.log(somaComFor)
+console.log(somaComFor);
 
+const nomesDosAlunos = alunos2.reduce((acumulador, aluno) => {
+  acumulador += `${aluno.nome} - ${aluno.curso}, `;
 
-const nomesDosAlunos = alunos2.reduce((acumulador,aluno) =>{
-  acumulador += `${aluno.nome} - ${aluno.curso}, `
+  return acumulador;
+}, "");
 
-  return acumulador
-}, "")
-
-console.log(nomesDosAlunos)
+console.log(nomesDosAlunos);

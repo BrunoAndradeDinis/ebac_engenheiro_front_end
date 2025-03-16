@@ -1,5 +1,7 @@
 "use strict";
 
+// refatorando aula anterior
+
 var redesSociais = ["Facebook", "Instagram", "Twitter"];
 for (var i = 0; i <= redesSociais.length; i++) {
   console.log("Eu tenho perfi na rede social: ".concat(redesSociais[i]));
@@ -45,8 +47,8 @@ alunos2.push({
 
 // every
 var todosOsAlunosSaoDeFrontEnd = alunos2.every(function (aluno) {
-  return aluno.curso === "Frontend"; // true or false
-});
+  return aluno.curso === "Frontend";
+} /* true or false*/);
 console.log(todosOsAlunosSaoDeFrontEnd);
 
 // some
@@ -56,9 +58,9 @@ var existeAlgumAlunoDeBackend = alunos2.some(function (aluno) {
 console.log(existeAlgumAlunoDeBackend);
 
 // filter
-function filtraAlunosDeBackend(aluno) {
+var filtraAlunosDeBackend = function filtraAlunosDeBackend(aluno) {
   return aluno.curso === "Backend";
-}
+};
 var alunosDeBackend = alunos2.filter(filtraAlunosDeBackend);
 console.log(alunosDeBackend);
 
