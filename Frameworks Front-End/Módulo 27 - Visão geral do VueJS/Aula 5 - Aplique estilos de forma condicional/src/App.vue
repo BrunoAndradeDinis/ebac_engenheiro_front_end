@@ -1,0 +1,122 @@
+<script setup>
+import { reactive } from "vue";
+
+const nome = "Bruno de Andrade";
+const meuObj = {
+  nome: "Bruno",
+  filmeFav: "The Warriors",
+  dizOla(x) {
+    return `${x} diz: Olá!`;
+  },
+};
+const enderecoDaImagem =
+  "https://sm.ign.com/ign_pt/screenshot/default/blob_2mkr.jpg";
+const enderecoDaImagem2 =
+  "https://i.scdn.co/image/ab67616d0000b273cfeae645958e9248abff0710";
+
+const botaoEstaDesabilitado = true;
+
+const gostaDoSquirtle = true;
+const gostaDoPikachu = false;
+
+const estaAutorizado = false;
+
+// let contador = 0;
+const estado = reactive({
+  contador: 0,
+  email: "",
+  saldo: 5000,
+  transferencia: 0,
+});
+
+function incrementar() {
+  estado.contador++;
+}
+
+function decrementar() {
+  estado.contador--;
+}
+
+function saldoFuturo(){
+  const {saldo, transferencia} = estado;
+  
+  return saldo - transferencia;
+}
+
+function validaValorTransferencia(){
+  const {saldo, transferencia} = estado;
+
+  return saldo >= transferencia;
+}
+const alteraEmail = (evento) => (estado.email = evento.target.value)
+</script>
+
+<template>
+  <h1>Olá Mundo!</h1>
+  <h2>{{ nome }}.</h2>
+  <h3>{{ meuObj.dizOla(meuObj.nome) }}</h3>
+  <div>
+    <img v-if="gostaDoSquirtle" :src="enderecoDaImagem" alt="" />
+    <img v-else-if="gostaDoPikachu" :src="enderecoDaImagem2" alt="" />
+    <h2 v-else>Não curte Pokemóns da primeira geração.</h2>
+  </div>
+  <div></div>
+
+  <h3 v-if="estaAutorizado">Bem vindo!</h3>
+  <h3 v-else>Não possui acesso!</h3>
+
+  <button :disabled="botaoEstaDesabilitado">Enviar mensagem</button>
+  <hr />
+
+  <div>
+    {{ estado.contador }}
+
+    <button type="button" @click="decrementar">-</button>
+    <button type="button" @click="incrementar">+</button>
+  </div>
+  <hr />
+  <div>
+    {{ estado.email }}
+
+    <div>
+      <input
+        type="email"
+        @keyup="alteraEmail"
+      />
+    </div>
+  </div>
+  <hr>
+  <div>
+    Saldo: {{estado.saldo}} <br>
+    Transferência: {{ estado.transferencia }} <br>
+    Saldo futuro: {{ saldoFuturo()}}
+    <div>
+      <input @keyup="evento => estado.transferencia = evento.target.value" type="number" placeholder="Qual o valor da transferência?" :class="{ invalido: !validaValorTransferencia()}">
+     <div>
+      <button v-if="validaValorTransferencia()">Transferir</button>
+      <span v-else>Valor maior que o saldo</span>
+     </div>
+    </div>
+
+  </div>
+</template>
+
+<style scoped>
+img {
+  max-width: 300px;
+  border-radius: 0.5rem;
+  border: 2px solid aqua;
+}
+div {
+  padding: 0.5rem;
+}
+input[type="number"]{
+  border-radius: 4px;
+}
+
+.invalido{
+  border-color: red;
+  outline-color: red;
+
+}
+</style>
