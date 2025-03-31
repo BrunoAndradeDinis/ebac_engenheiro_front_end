@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "package.json",
+=======
+  "name": "p",
+>>>>>>> da10fec (Atualizações para as aulas)
   "version": "0.0.0",
   "private": true,
   "type": "module",
