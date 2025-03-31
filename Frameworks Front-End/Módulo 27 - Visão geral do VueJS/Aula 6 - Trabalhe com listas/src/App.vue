@@ -27,7 +27,14 @@ const estado = reactive({
   email: "",
   saldo: 5000,
   transferencia: 0,
+  nomes: ["Bruno", "Honey", "Bianca", "Frô", "Lilu"],
+  nomeAInserir: "",
 });
+
+const alteraEmail = (evento) => (estado.email = evento.target.value);
+
+// lista de nomes
+// const nomes = ["Bruno", "Brinu", "Malone", "Honey", "Hana", "Bingu", "Bianca", "Frô", "Lilu", "Frida"]
 
 function incrementar() {
   estado.contador++;
@@ -37,18 +44,22 @@ function decrementar() {
   estado.contador--;
 }
 
-function saldoFuturo(){
-  const {saldo, transferencia} = estado;
-  
+function saldoFuturo() {
+  const { saldo, transferencia } = estado;
+
   return saldo - transferencia;
 }
 
-function validaValorTransferencia(){
-  const {saldo, transferencia} = estado;
+function validaValorTransferencia() {
+  const { saldo, transferencia } = estado;
 
   return saldo >= transferencia;
 }
-const alteraEmail = (evento) => (estado.email = evento.target.value)
+
+function cadastrarNome(){
+  estado.nomeAInserir.length >= 3 ? estado.nomes.push(estado.nomeAInserir) : alert("Digite mais caracteres")
+}
+
 </script>
 
 <template>
@@ -79,25 +90,35 @@ const alteraEmail = (evento) => (estado.email = evento.target.value)
     {{ estado.email }}
 
     <div>
-      <input
-        type="email"
-        @keyup="alteraEmail"
-      />
+      <input type="email" @keyup="alteraEmail" />
     </div>
   </div>
-  <hr>
+  <hr />
   <div>
-    Saldo: {{estado.saldo}} <br>
-    Transferência: {{ estado.transferencia }} <br>
-    Saldo futuro: {{ saldoFuturo()}}
+    Saldo: {{ estado.saldo }} <br />
+    Transferência: {{ estado.transferencia }} <br />
+    Saldo futuro: {{ saldoFuturo() }}
     <div>
-      <input @keyup="evento => estado.transferencia = evento.target.value" type="number" placeholder="Qual o valor da transferência?" :class="{ invalido: !validaValorTransferencia()}">
-     <div>
-      <button v-if="validaValorTransferencia()">Transferir</button>
-      <span v-else>Valor maior que o saldo</span>
-     </div>
+      <input
+        @keyup="(evento) => (estado.transferencia = evento.target.value)"
+        type="number"
+        placeholder="Qual o valor da transferência?"
+        :class="{ invalido: !validaValorTransferencia() }"
+      />
+      <div>
+        <button v-if="validaValorTransferencia()">Transferir</button>
+        <span v-else>Valor maior que o saldo</span>
+      </div>
     </div>
-
+  </div>
+  <hr />
+  <div>
+    <ul>
+      <li v-for="nome in estado.nomes">{{ nome }}</li>
+    </ul>
+    <input @keyup="evento => estado.nomeAInserir = evento.target.value" type="text" placeholder="Digite um novo nome:" />
+    <button type="button" @click="cadastrarNome()">Adicionar</button>
+    <h3 v-for="nome in estado.nomes">{{ nome }}</h3>
   </div>
 </template>
 
@@ -110,14 +131,17 @@ img {
 div {
   padding: 0.5rem;
 }
-input[type="number"]{
+input[type="number"] {
   border-radius: 4px;
 }
 
-.invalido{
+.invalido {
   border-color: red;
   outline-color: red;
 }
 
-
+li {
+  display: inline-block;
+  padding: 1rem;
+}
 </style>
