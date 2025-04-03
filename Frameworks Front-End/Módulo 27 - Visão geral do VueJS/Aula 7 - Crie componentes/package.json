@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "package.json",
-=======
-  "name": "p",
->>>>>>> da10fec (Atualizações para as aulas)
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {
