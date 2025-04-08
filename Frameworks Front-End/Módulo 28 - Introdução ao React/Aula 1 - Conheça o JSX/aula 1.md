@@ -3,6 +3,7 @@ Estamos iniciando a nossa primeira aula. Nesse momento, dê play na videoaula pa
 - compreender o que é JSX e como ele é usado para criar elementos de interface do usuário no React;
 - utilizar fragmentos em JSX para envolver múltiplos elementos sem a necessidade de uma div ou outro contêiner;
 - explorar como as expressões JSX condicionais funcionam.
+- criando um react app com vite
 
 ## Sobre o ReactJS
 
@@ -37,6 +38,7 @@ Caso precisemos exportar mais de uma tag, é necessário incluir num wrapper uma
   export default Titulo
 ```
 
+
 Para não inserirmos a div em tudo, o React disponibiliza **fragments**, que são tags vazias, apenas para encapsulamento:
 
 ```
@@ -54,3 +56,16 @@ Para não inserirmos a div em tudo, o React disponibiliza **fragments**, que sã
 ## Códigos do módulo
 
 Para consultar o código do projeto desenvolvido durante o módulo acesse o [link](https://github.com/ogiansouza/github_perfil). 
+
+## Criando um react app com vite
+
+Rode o comando abaixo:
+```
+    npm init vite@latest .
+```
+Defina o nome do projeto e selecione o framework e a linguagem que ira utilizar.
+Assim ele instalar pode rodar o comanto abaixo:
+```
+    npm install
+    npm run dev
+```
