@@ -1,38 +1,30 @@
-Estamos iniciando a nossa terceira aula. Nesse momento, dê play na videoaula para: 
+Estamos iniciando a nossa quinta aula. Nesse momento, dê play na videoaula para:
 
-- assimilar o conceito de reatividade no React;
-- iniciar e atualizar o estado;
-- compreender como o estado pode afetar a renderização dos componentes;
-- configurar e gerenciar eventos;
-- passar argumentos para manipuladores de eventos.
+- entender os conceitos e a sintaxe necessários para mapear uma lista de itens e renderizá-las individualmente;
+- dominar o uso de map() para renderização de listas em React;
+- compreender o conceito e a importância de chaves (keys) em elementos renderizados.
 
-## UseState
+## Use map
 
-O estado de um componente é basicamente um valor que poderá ser alterado e esta alteração irá implicar em mudanças na interface, na UI. Pode ser um número de um contador que será incrementado, um nome que, ao usuário preencher o campo, será exibido instantaneamente, entre outros.
+Para renderizar dados brutos como números, _strings_ e propriedades de objetos no JSX, utilizamos o conjunto de **chaves**, porém isso não funciona quando temos que renderizar itens de um _array_.
 
-Para criar um estado no React utilizamos uma função chamada **useState**.
+Para renderizar vários itens precisamos utilizar o **map** e retornar para cada item do array um elemento React.
 
-O useState é uma função que nos retornará um valor (estado) e uma função para alterar este valor:
-- `const [nome, alteraNome] = useState(‘’);`
-
-Dentro da função useState passamos o valor inicial, no caso uma string vazia.
-
-Não podemos, nem devemos alterar o valor diretamente, como nome = “João”, isso fere os princípios de reatividade do React e caso utilizemos este valor dentro das tags em return, a UI pode não ser atualizada.
-
-Costumamos nomear a função que altera o valor com set antes, por exemplo: **setNome**
-
-## Sobre eventos
-O React possui todos os eventos que o JavaScript possui, porém em **camelCase**:
-- `<input type=“text” onChange={} />`
-
-Dentro do evento podemos executar a função diretamente ou passar uma função.
-- `<input type=“text” onChange={evento => setNome(evento.target.value)} />`
-
-Ou com a função:
-``` 
-  function alterarNome(evento) { 
-    setNome(evento.target.value); 
-  } 
-  
-  <input type=“text” onChange={alterarNome} />
 ```
+function Produtos() {
+  const items = ["Celular", "TV", "PS5"];
+
+  return (
+    <>
+      <h3>Produtos</h3>
+      <ul>
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </>
+  );
+}
+```
+
+No exemplo, temos o atributo key na LI, isso é necessário para que o React saiba gerenciar os elementos renderizados a partir de uma iteração. Geralmente utilizamos um ID que virá de uma integração com o Back-End. Caso não possuirmos um ID devemos utilizar algum valor único, que não se repita na lista.
