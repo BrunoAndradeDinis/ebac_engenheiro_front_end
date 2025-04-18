@@ -7,10 +7,11 @@ export default function Form({imcResultado}) {
   const [imcCalculado, setImcCalculado] = useState(0)
   const calcular = (e)=>{
     e.preventDefault()
-    setImcCalculado(peso / (altura * 2))
+    let imc = peso / (altura * 2)
+    setImcCalculado(imc)
 
     console.log(imcCalculado)
-    imcResultado(imcCalculado)
+    imcResultado(imc)
   }
   return (
     <form className={form}>
