@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   border-radius: 1rem;
+  transition: .3s ease-in-out;
 }
 
 body {
@@ -24,11 +25,12 @@ body {
   --color1: #f0f0d8;
   --color2: #90c5ba;
   --color3: #2e302c;
-  --color5: #f84600;
   --color4: #df8615;
-  --color6: #234d20;
+  --color5: #f84600;
+  --color6: #545f15;
   --color7: #36802d;
-  --color8: #77ab59;
+  --color8: #bef15e;
+  --color8Hover: #bef15e94;
   --color9: #c9df8a;
   --color10: #6f3a45;
 }

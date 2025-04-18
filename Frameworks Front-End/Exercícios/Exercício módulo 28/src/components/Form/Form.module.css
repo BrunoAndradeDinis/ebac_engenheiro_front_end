@@ -6,7 +6,7 @@
 }
 
 .form {
-  height: 80vh;
+  height: 60vh;
   width: 20vw;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,15 @@
 
 .form__container__button {
   background-color: var(--color8);
-  color: #faebd7;
+  color: var(--color3);
   border-color: none;
   outline-color: none;
+  padding: .5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.form__container__button:hover {
+  background-color: var(--color8Hover);
 }
