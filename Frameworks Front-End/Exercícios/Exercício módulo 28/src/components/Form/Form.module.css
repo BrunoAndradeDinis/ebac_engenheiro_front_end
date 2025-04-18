@@ -1,0 +1,46 @@
+.form,
+.form__container,
+.form__container__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  height: 80vh;
+  width: 20vw;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color2);
+  margin: 10vh 0 10vh;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.form__container {
+  height: 40vh;
+  justify-content: space-evenly;
+}
+
+.form__container__title {
+  text-align: center;
+}
+
+.form__container__item {
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.form__container__item label {
+  padding-left: 0.3rem;
+}
+
+.form__container__item input {
+  padding: 0.4rem 0.5rem;
+  outline-color: rgb(16, 107, 84);
+}
+
+.form__container__button {
+  background-color: var(--color8);
+  color: #faebd7;
+  border-color: none;
+  outline-color: none;
+}

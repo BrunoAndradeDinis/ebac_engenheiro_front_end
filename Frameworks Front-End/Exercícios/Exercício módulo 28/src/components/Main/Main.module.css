@@ -1,0 +1,25 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  margin: 20vh 10VW 20vh 0;
+  background-color: var(--color9);
+  max-width: 700PX;
+}
+
+.main__title{
+
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.main__container__item{
+  border: 1px var(--color3) solid;
+  padding: 1rem;
+}
