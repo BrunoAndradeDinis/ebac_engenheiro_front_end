@@ -5,11 +5,11 @@ const rootReducer = {
   carrinho: carrinhoReducer
 }
 
-const store = configureStore({
+export const store = configureStore({
   reducer: rootReducer
 })
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 
-export default store
+export type RootReducer = ReturnType<typeof store.getState>
