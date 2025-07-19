@@ -2,7 +2,7 @@ import * as enums from '../../utils/enums/Tarefa'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 type FiltroState = {
-  termo: string
+  termo?: string
   criterio: 'prioridade' | 'status' | 'todas'
   valor?: enums.Prioridade | enums.Status
 }
