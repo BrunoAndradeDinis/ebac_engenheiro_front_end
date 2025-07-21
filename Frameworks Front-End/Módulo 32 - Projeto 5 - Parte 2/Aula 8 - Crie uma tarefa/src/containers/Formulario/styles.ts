@@ -24,8 +24,9 @@ export const Opcoes = styled.div`
   }
 `
 
-export const ff = styled.label`
-  background: #aaa;
+export const Opcao = styled.div`
+  display: inline;
+  text-transform: capitalize;
 `
 
 export const fff = styled.p`
