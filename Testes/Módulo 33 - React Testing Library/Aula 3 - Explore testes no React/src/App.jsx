@@ -12,11 +12,11 @@ function App() {
   return (
     <>
       <div>
-       <input type="text" value={tarefatemp} onChange={({target})=> setTarefaTemp(target.value)}/>
-       <button onClick={cadastrarTarefa}>Cadastrar</button>
+       <input data-testid="campo-tarefa" type="text" value={tarefatemp} onChange={({target})=> setTarefaTemp(target.value)}/>
+       <button data-testid="btn-cadastrar" onClick={cadastrarTarefa}>cadastrar</button>
        <ul>
         {tarefas.map((tarefa, indice) => (
-          <li key={indice + 1}>{indice + 1}º {tarefa}</li>
+          <li key={indice + 1}>{tarefa}</li>
         ))}
        </ul>
       </div>
