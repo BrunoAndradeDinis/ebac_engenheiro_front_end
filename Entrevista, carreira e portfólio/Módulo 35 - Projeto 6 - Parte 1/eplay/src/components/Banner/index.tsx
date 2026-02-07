@@ -1,0 +1,29 @@
+import Button from '../Button'
+import Tag from '../Tag'
+import { Imagem, Preco, Titulo } from './styles'
+
+const Banner = () => {
+  return (
+    <Imagem>
+      <div className="container">
+        <Tag size="big">Destaque do dia</Tag>
+        <div>
+          <Titulo>Marvel&apos;s Spider-Man: Miles Morales PS4 & PS5</Titulo>
+          <Preco>
+            De <span>R$ 250,00</span> <br />
+            por apenas R$ 99,90
+          </Preco>
+        </div>
+        <Button
+          type="link"
+          to="/produtos"
+          title="Clique aqui para aproveitar essa oferta"
+        >
+          Aproveitar
+        </Button>
+      </div>
+    </Imagem>
+  )
+}
+
+export default Banner
