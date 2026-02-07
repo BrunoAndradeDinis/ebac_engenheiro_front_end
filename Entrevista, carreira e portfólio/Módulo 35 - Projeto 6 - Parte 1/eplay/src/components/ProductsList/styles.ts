@@ -14,7 +14,9 @@ export const Title = styled.h2`
   font-size: 18px;
   font-weight: bold;
 `
-export const SectionContainer = styled.section<Omit<ListProps, 'title'>>`
+export const SectionContainer = styled.section<
+  Omit<ListProps, 'title' | 'games'>
+>`
   background-color: ${(props) =>
     props.backgroundColor === 'gray' ? colors.gray : colors.black};
   padding: 32px 0;

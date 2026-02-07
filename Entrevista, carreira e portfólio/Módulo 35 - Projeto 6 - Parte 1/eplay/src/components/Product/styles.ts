@@ -9,8 +9,9 @@ export const Card = styled.div`
 
   img {
     width: 100%;
-    max-width: 300px;
-    height: auto;
+    max-width: 222px;
+    height: 100%;
+    max-height: 250px;
     border-radius: 8px;
   }
 
