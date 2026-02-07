@@ -17,6 +17,8 @@ export const Card = styled.div`
   ${TagContainer} {
     margin-right: 8px;
   }
+
+  position: relative;
 `
 export const Titulo = styled.h3`
   font-size: 16px;
@@ -30,4 +32,10 @@ export const Descricao = styled.p`
   line-height: 22px;
   display: block;
   margin-top: 16px;
+`
+export const Infos = styled.div`
+  display: flex;
+  position: absolute;
+  top: 16px;
+  right: 16px;
 `
