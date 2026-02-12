@@ -10,7 +10,10 @@ export type ListProps = {
 
 const ProductsList = ({ backgroundColor, games, title }: ListProps) => {
   return (
-    <SectionContainer backgroundColor={backgroundColor}>
+    <SectionContainer
+      backgroundColor={backgroundColor}
+      id={title.toLowerCase()}
+    >
       <div className="container">
         <Title>{title}</Title>
         <List>
