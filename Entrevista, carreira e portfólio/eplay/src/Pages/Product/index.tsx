@@ -1,6 +1,9 @@
 import { useParams } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
+import Gallery from '../../components/Gallery'
+
+import logo from '../../assets/images/logo.svg'
 
 const Product = () => {
   const { id } = useParams()
@@ -36,9 +39,7 @@ const Product = () => {
           jogo.
         </p>
       </Section>
-      <Section title={`Galeria`} backgroundColor="black">
-        <div>Fotos</div>
-      </Section>
+      <Gallery defaultCover={logo} name="Hogwarts Legacy" />
     </>
   )
 }
