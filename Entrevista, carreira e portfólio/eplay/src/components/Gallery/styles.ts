@@ -44,10 +44,14 @@ export const Modal = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 1;
+
+  &.visible {
+    display: flex;
+  }
 
   .container {
     max-width: 960px;
@@ -78,8 +82,14 @@ export const ModalContent = styled.div`
     }
   }
 
-  img {
+  img,
+  iframe {
     display: block;
     max-width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 480px;
   }
 `
