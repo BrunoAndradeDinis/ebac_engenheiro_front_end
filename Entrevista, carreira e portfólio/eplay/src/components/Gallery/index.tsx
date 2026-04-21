@@ -6,11 +6,7 @@ import zelda from '../../assets/images/zelda.png'
 import fechar from '../../assets/images/close.png'
 import { Action, Item, List, Modal, ModalContent } from './styles'
 import { useState } from 'react'
-
-interface IGalleryItem {
-  type: 'image' | 'video'
-  url: string
-}
+import { IGalleryItem } from '../../Pages/Home'
 
 type GalleryProps = {
   defaultCover: string

@@ -1,16 +1,15 @@
 import styled from 'styled-components'
-import bannerImg from '../../assets/images/miranha.png'
 import { TagContainer } from '../Tag/styles'
 
 export const Imagem = styled.div`
   width: 100%;
   height: 35rem;
   display: block;
-  background-image: url(${bannerImg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+  object-fit: cover;
 
   .container {
     position: relative;
@@ -25,6 +24,17 @@ export const Imagem = styled.div`
     position: absolute;
     top: 2rem;
     left: 2rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
   }
 `
 export const Titulo = styled.h2`
