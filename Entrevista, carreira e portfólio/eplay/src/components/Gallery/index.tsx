@@ -1,8 +1,6 @@
 import Section from '../Section'
-import hogwarts from '../../assets/images/Hogwarts_Legacy.jpg'
 import zoom from '../../assets/images/mais-zoom.png'
 import play from '../../assets/images/botao-play.png'
-import zelda from '../../assets/images/zelda.png'
 import fechar from '../../assets/images/close.png'
 import { Action, Item, List, Modal, ModalContent } from './styles'
 import { useState } from 'react'
@@ -11,25 +9,26 @@ import { IGalleryItem } from '../../Pages/Home'
 type GalleryProps = {
   defaultCover: string
   name: string
+  items?: IGalleryItem[]
 }
 
 interface IModalState extends IGalleryItem {
   isVisible: boolean
 }
 
-const mock: IGalleryItem[] = [
-  { type: 'image', url: zelda },
-  {
-    type: 'image',
-    url: hogwarts
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/sP6TfjupEJg?si=ZACF1CQ1mOgEjKsB'
-  }
-]
+// const mock: IGalleryItem[] = [
+//   { type: 'image', url: zelda },
+//   {
+//     type: 'image',
+//     url: hogwarts
+//   },
+//   {
+//     type: 'video',
+//     url: 'https://www.youtube.com/embed/sP6TfjupEJg?si=ZACF1CQ1mOgEjKsB'
+//   }
+// ]
 
-const Gallery = ({ defaultCover, name }: GalleryProps) => {
+const Gallery = ({ defaultCover, name, items }: GalleryProps) => {
   const [modalState, setModalState] = useState<IModalState>({
     type: 'image',
     url: '',
@@ -57,7 +56,7 @@ const Gallery = ({ defaultCover, name }: GalleryProps) => {
     <>
       <Section title={`Galeria`} backgroundColor="black">
         <List>
-          {mock.map((item, index) => (
+          {items?.map((item, index) => (
             <Item
               key={index}
               onClick={() => {

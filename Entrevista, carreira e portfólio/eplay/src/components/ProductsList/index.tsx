@@ -44,15 +44,17 @@ const ProductsList = ({ backgroundColor, games, title }: ListProps) => {
         <Title>{title}</Title>
         <List>
           {games.map((game) => (
-            <Product
-              key={game.id}
-              category={game.details.category}
-              imageUrl={game.media.thumbnail}
-              description={game.description}
-              infos={getGameTags(game)}
-              system={game.details.system}
-              title={game.name}
-            />
+            <li key={game.id}>
+              <Product
+                category={game.details.category}
+                imageUrl={game.media.thumbnail}
+                description={game.description}
+                infos={getGameTags(game)}
+                system={game.details.system}
+                title={game.name}
+                id={game.id}
+              />
+            </li>
           ))}
         </List>
       </div>
