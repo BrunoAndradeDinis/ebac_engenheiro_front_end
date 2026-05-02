@@ -80,6 +80,12 @@ export const ModalContent = styled.div`
       font-size: 18px;
       font-weight: bold;
     }
+
+    img:hover {
+      opacity: 0.8;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+    }
   }
 
   > img,

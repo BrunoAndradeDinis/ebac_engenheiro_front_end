@@ -4,11 +4,24 @@ import { formatPrice } from '../ProductsList'
 import Tag from '../Tag'
 import { Banner, Infos } from './styles'
 
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
+
 type HeroProps = {
   game: Game
 }
 
 const Hero = ({ game }: HeroProps) => {
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(game))
+  }
+
+  const openCart = () => {
+    dispatch(open())
+  }
+
   return (
     <>
       <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
@@ -30,13 +43,17 @@ const Hero = ({ game }: HeroProps) => {
             )}
             {game.prices.current && (
               <Button
-                type="link"
+                type="button"
                 to={`/product/${game.id}`}
                 title={`Clique aqui para aproveitar essa oferta de ${formatPrice(
                   game.prices.current
                 )}`}
+                onClick={() => {
+                  addToCart()
+                  openCart()
+                }}
               >
-                Aproveitar
+                Adicionar ao carrinho
               </Button>
             )}
           </Infos>

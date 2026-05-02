@@ -11,6 +11,7 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease-in-out;
 `
 
 export const CartContainer = styled.div`
@@ -19,9 +20,16 @@ export const CartContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  // display: flex;
   justify-content: flex-end;
   z-index: 1;
+  display: none;
+
+  &.is-open {
+    display: flex;
+  }
+
+  transition: all 0.5s ease-in-out;
 `
 
 export const Sidebar = styled.aside`

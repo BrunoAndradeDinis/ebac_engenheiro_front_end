@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux'
-import { store } from './Pages/store'
+import { store } from './store'
 import { BrowserRouter } from 'react-router-dom'
 
 import Header from './components/Header'
