@@ -2,20 +2,12 @@ import { useParams } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
-
-import { useEffect, useState } from 'react'
-import { Game } from '../Home'
+import { useGetProductByIdQuery } from '../../services/api'
 
 const Product = () => {
   const { id } = useParams()
 
-  const [game, setGame] = useState<Game>()
-
-  useEffect(() => {
-    fetch(`https://api-ebac.vercel.app/api/eplay/jogos/${id}`)
-      .then((response) => response.json())
-      .then((data) => setGame(data))
-  }, [id])
+  const { data: game } = useGetProductByIdQuery(id!)
 
   if (!game) {
     return (

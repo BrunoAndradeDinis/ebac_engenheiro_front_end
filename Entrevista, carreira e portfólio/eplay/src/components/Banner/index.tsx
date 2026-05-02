@@ -1,23 +1,16 @@
-import { useEffect, useState } from 'react'
 import Button from '../Button'
 import Tag from '../Tag'
 import { Imagem, Preco, Titulo } from './styles'
-import { Game } from '../../Pages/Home'
 import { formatPrice } from '../ProductsList'
+import { useGetFeaturedGameQuery } from '../../services/api'
 
 const Banner = () => {
-  const [game, setGame] = useState<Game>()
-
-  useEffect(() => {
-    fetch('https://api-ebac.vercel.app/api/eplay/destaque')
-      .then((response) => response.json())
-      .then((data) => setGame(data))
-  }, [])
+  const { data: game, isLoading } = useGetFeaturedGameQuery()
 
   if (!game) {
     return (
       <>
-        <h3>'Carregando...'</h3>
+        <h3>&apos;Carregando...&apos;</h3>
       </>
     )
   }

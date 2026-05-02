@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
-import { useEffect, useState } from 'react'
+import { useGetOnSaleQuery, useGetSoonQuery } from '../../services/api'
 
 // import Game from '../../Models/Game'
 // import resident from '../../assets/images/resident.png'
@@ -128,31 +128,30 @@ export type Game = {
 }
 
 const Home = () => {
-  const [promocoes, setPromocoes] = useState<Game[]>([])
-  const [emBreve, setEmBreve] = useState<Game[]>([])
+  const { data: onSaleGames } = useGetOnSaleQuery()
+  const { data: soonGames } = useGetSoonQuery()
 
-  useEffect(() => {
-    fetch('https://api-ebac.vercel.app/api/eplay/promocoes')
-      .then((response) => response.json())
-      .then((data) => {
-        setPromocoes(data)
-      })
+  if (!onSaleGames || !soonGames) {
+    return (
+      <>
+        <h3>&apos;Carregando...&apos;</h3>
+      </>
+    )
+  }
 
-    fetch('https://api-ebac.vercel.app/api/eplay/em-breve')
-      .then((response) => response.json())
-      .then((data) => {
-        setEmBreve(data)
-      })
-  }, [])
   return (
     <>
       <Banner />
       <ProductsList
         title="Promoções"
         backgroundColor="gray"
-        games={promocoes}
+        games={onSaleGames || []}
       />
-      <ProductsList title="Em breve" backgroundColor="black" games={emBreve} />
+      <ProductsList
+        title="Em breve"
+        backgroundColor="black"
+        games={soonGames || []}
+      />
     </>
   )
 }
