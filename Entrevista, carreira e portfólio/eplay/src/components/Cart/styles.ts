@@ -13,7 +13,6 @@ export const Overlay = styled.div`
   background: rgba(0, 0, 0, 0.7);
   transition: all 0.5s ease-in-out;
 `
-
 export const CartContainer = styled.div`
   position: fixed;
   top: 0;
@@ -38,6 +37,27 @@ export const Sidebar = styled.aside`
   padding: 20px 16px 0;
   max-width: 360px;
   width: 100%;
+
+  .close_container {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 40px;
+  }
+
+  button.close {
+    background: transparent;
+    background-image: url('${fechar}');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 12px;
+    height: 12px;
+    border: none;
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    cursor: pointer;
+  }
 
   button {
     width: 100%;
@@ -96,17 +116,23 @@ export const CartItem = styled.li`
   ${TagContainer} {
     margin: 8px 8px 16px 0;
   }
-
   button {
     background: transparent;
-    background-image: url('${fechar}');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     border: none;
     position: absolute;
     top: 8px;
     right: 4px;
     cursor: pointer;
+    padding: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: transparent;
+    }
+  }
 `

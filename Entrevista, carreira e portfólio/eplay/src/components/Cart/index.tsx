@@ -13,6 +13,7 @@ import { RootReducer } from '../../store'
 import { useDispatch } from 'react-redux'
 import { close, remove } from '../../store/reducers/cart'
 import { formatPrice } from '../ProductsList'
+import trash from '../../assets/images/trash.png'
 
 const img = 'https://images.igdb.com/igdb/image/upload/t_cover_big/co1r8c.jpg'
 
@@ -33,6 +34,9 @@ const Cart = () => {
     <CartContainer className={isOpen ? 'is-open' : ''}>
       <Overlay onClick={closeCart} />
       <Sidebar>
+        <div className="close_container">
+          <button type="button" onClick={closeCart} className="close" />
+        </div>
         <ul>
           {items.map((item) => (
             <CartItem key={item.id}>
@@ -44,7 +48,9 @@ const Cart = () => {
                 <Tag size="small">{item.details.system}</Tag>
                 <span>{formatPrice(item.prices.current || 0)}</span>
               </div>
-              <button type="button" onClick={() => removeFromCart(item.id)} />
+              <button type="button" onClick={() => removeFromCart(item.id)}>
+                <img src={trash} alt="Remover do carrinho" />
+              </button>
             </CartItem>
           ))}
         </ul>

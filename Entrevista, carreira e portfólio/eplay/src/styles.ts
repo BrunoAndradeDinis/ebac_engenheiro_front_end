@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const colors = {
   white: '#eeeeee',
@@ -6,6 +6,12 @@ export const colors = {
   gray: '#333333',
   grayLight: '#999999',
   green: '#10AC84'
+}
+
+export const breakpoints = {
+  mobile: '560px',
+  tablet: '768px',
+  desktop: '1024px'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -30,6 +36,9 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      max-width: 80%;
+    }
   }
 `

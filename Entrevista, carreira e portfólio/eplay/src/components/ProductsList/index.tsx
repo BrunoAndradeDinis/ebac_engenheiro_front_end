@@ -7,6 +7,7 @@ export type ListProps = {
   title: string
   backgroundColor: 'gray' | 'black'
   games: Game[]
+  id?: string
 }
 
 export const formatPrice = (price = 0) => {
@@ -16,7 +17,7 @@ export const formatPrice = (price = 0) => {
   }).format(price)
 }
 
-const ProductsList = ({ backgroundColor, games, title }: ListProps) => {
+const ProductsList = ({ backgroundColor, games, title, id }: ListProps) => {
   const getGameTags = (game: Game) => {
     const tags = []
 
@@ -36,10 +37,7 @@ const ProductsList = ({ backgroundColor, games, title }: ListProps) => {
   }
 
   return (
-    <SectionContainer
-      backgroundColor={backgroundColor}
-      id={title.toLowerCase()}
-    >
+    <SectionContainer backgroundColor={backgroundColor} id={id}>
       <div className="container">
         <Title>{title}</Title>
         <List>

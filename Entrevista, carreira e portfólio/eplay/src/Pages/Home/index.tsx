@@ -146,11 +146,13 @@ const Home = () => {
         title="Promoções"
         backgroundColor="gray"
         games={onSaleGames || []}
+        id="on-sale"
       />
       <ProductsList
         title="Em breve"
         backgroundColor="black"
         games={soonGames || []}
+        id="coming-soon"
       />
     </>
   )
