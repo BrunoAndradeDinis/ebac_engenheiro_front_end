@@ -4,12 +4,17 @@ import * as Yup from 'yup'
 import Button from '../../components/Button'
 import Card from '../../components/Card'
 import { Row, InputGroup, TabButton } from './styles'
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
 
 import boleto from '../../assets/images/boleto.png'
 import cartao from '../../assets/images/cartao.png'
+import { usePurchaseMutation } from '../../services/api'
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
+  const [purchase, { isLoading, isError, data }] = usePurchaseMutation()
+  const { items } = useSelector((state: RootReducer) => state.cart)
 
   const form = useFormik({
     initialValues: {
@@ -98,7 +103,37 @@ const Checkout = () => {
       )
     }),
     onSubmit: (values) => {
-      console.log(values)
+      purchase({
+        products: items.map((it) => ({
+          id: it.id,
+          price: it.prices.current || 0
+        })),
+        billing: {
+          document: values.cpf,
+          email: values.email,
+          name: values.fullName
+        },
+        delivery: {
+          email: values.deliveryEmail
+        },
+        payment: {
+          card: {
+            active: payWithCard,
+            code: Number(values.cardCode),
+            expires: {
+              month: Number(values.expiresMonth),
+              year: Number(values.expiresYear)
+            },
+            name: values.cardDisplayName,
+            number: values.cardNumber,
+            owner: {
+              document: values.cpfCardOwner,
+              name: values.cardOwner
+            }
+          },
+          installments: Number(values.installments)
+        }
+      })
     }
   })
 
@@ -329,6 +364,8 @@ const Checkout = () => {
                     <label htmlFor="cardCode">CVV</label>
                     <input
                       type="text"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
                       placeholder="123"
                       id="cardCode"
                       name="cardCode"
