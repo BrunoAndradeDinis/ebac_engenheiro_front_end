@@ -15,8 +15,6 @@ import { close, remove } from '../../store/reducers/cart'
 import { formatPrice } from '../ProductsList'
 import trash from '../../assets/images/trash.png'
 
-const img = 'https://images.igdb.com/igdb/image/upload/t_cover_big/co1r8c.jpg'
-
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
   const dispatch = useDispatch()

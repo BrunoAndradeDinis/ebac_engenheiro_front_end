@@ -8,11 +8,6 @@ import {
   useGetSimulationGamesQuery
 } from '../../services/api'
 
-// import Game from '../../Models/Game'
-import { Game } from '../Home'
-
-const allGames: Game[] = []
-
 // const acao = allGames.filter((game) => game.category === 'Ação')
 // const aventura = allGames.filter((game) => game.category === 'Aventura')
 // const rpg = allGames.filter((game) => game.category === 'RPG')

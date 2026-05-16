@@ -3,6 +3,7 @@ import { ButtonContainer, ButtonLink } from './styles'
 
 export type ButtonProps = {
   type: 'button' | 'link'
+  buttonType?: 'button' | 'submit'
   title?: string
   to?: string
   onClick?: () => void
@@ -12,6 +13,7 @@ export type ButtonProps = {
 
 const Button = ({
   type,
+  buttonType = 'button',
   title,
   to,
   onClick,
@@ -21,21 +23,21 @@ const Button = ({
   if (type === 'button') {
     return (
       <ButtonContainer
-        type="button"
+        type={buttonType}
         title={title}
         onClick={onClick}
-        variant={variant}
+        $variant={variant}
       >
         {children}
       </ButtonContainer>
     )
-  } else {
-    return (
-      <ButtonLink type="link" title={title} to={to as string}>
-        {children}
-      </ButtonLink>
-    )
   }
+
+  return (
+    <ButtonLink type="link" title={title} to={to as string}>
+      {children}
+    </ButtonLink>
+  )
 }
 
 export default Button
