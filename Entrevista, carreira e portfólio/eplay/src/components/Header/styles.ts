@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { breakpoints, colors as cores } from '../../styles'
+import { breakpoints, colors, colors as cores } from '../../styles'
+import { HashLink as RouterLink } from 'react-router-hash-link'
 
 export const Links = styled.ul`
   display: flex;
@@ -10,6 +11,13 @@ export const Links = styled.ul`
     display: block;
   }
 `
+
+export const Link = styled(RouterLink)`
+  color: ${colors.grayLight};
+  text-decoration: none;
+  margin-right: 8px;
+`
+
 export const HeaderBar = styled.header`
   background-color: ${cores.gray};
   border-radius: 1rem;
@@ -35,7 +43,7 @@ export const LinkItem = styled.li`
   @media (max-width: ${breakpoints.tablet}) {
     margin-right: 0;
 
-    a {
+    ${Link} {
       display: block;
       padding: 1rem 0;
       text-align: center;

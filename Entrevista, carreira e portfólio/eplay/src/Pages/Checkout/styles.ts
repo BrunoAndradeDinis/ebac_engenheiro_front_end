@@ -49,7 +49,7 @@ export const TabButton = styled.button<TabButtonProps>`
   border-radius: 8px;
   border: 1px solid
     ${(props) => (props.$isActive ? colors.green : colors.black)};
-  margin: 24px 16px 24px 0;
+  margin: 0 16px 24px 0;
   padding: 0 8px;
 
   img {

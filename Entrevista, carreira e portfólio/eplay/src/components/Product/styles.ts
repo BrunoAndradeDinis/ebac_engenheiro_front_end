@@ -7,7 +7,7 @@ export const Card = styled(Link)`
   background-color: ${colors.gray};
   border-radius: 8px;
   padding: 8px;
-  min-height: 410px;
+  // height: 100%;
   text-decoration: none;
   color: ${colors.white};
   display: block;
@@ -15,8 +15,10 @@ export const Card = styled(Link)`
   img {
     display: block;
     width: 100%;
+    min-width: 222px;
     max-width: 222px;
     height: 100%;
+    min-height: 250px;
     max-height: 250px;
     border-radius: 8px;
     object-fit: cover;

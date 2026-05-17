@@ -36,6 +36,7 @@ export const Item = styled.li`
   }
 
   &:hover ${Action} {
+    cursor: zoom-in;
     opacity: 1;
   }
 `
@@ -66,6 +67,7 @@ export const Modal = styled.div`
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.73);
+    cursor: zoom-out;
   }
 `
 

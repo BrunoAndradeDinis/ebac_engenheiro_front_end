@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import {
   HeaderBar,
   Links,
@@ -6,7 +5,8 @@ import {
   LinkCart,
   MenuBurger,
   HeaderRow,
-  NavMobile
+  NavMobile,
+  Link
 } from './styles'
 import logo from '../../assets/images/logo.svg'
 import carrinho from '../../assets/images/shopping-cart.svg'
@@ -40,13 +40,25 @@ const Header = () => {
           <nav>
             <Links>
               <LinkItem>
-                <Link to="/categories">Categorias</Link>
+                <Link
+                  title="Clique aqui para ver as categorias"
+                  to="/categories"
+                >
+                  Categorias
+                </Link>
               </LinkItem>
               <LinkItem>
-                <a href="/#coming-soon">Novidades</a>
+                <Link
+                  title="Clique aqui para ver as novidades"
+                  to="/#coming-soon"
+                >
+                  Novidades
+                </Link>
               </LinkItem>
               <LinkItem>
-                <a href="/#on-sale">Promoções</a>
+                <Link title="Clique aqui para ver as promoções" to="/#on-sale">
+                  Promoções
+                </Link>
               </LinkItem>
             </Links>
           </nav>
@@ -59,13 +71,31 @@ const Header = () => {
       <NavMobile className={isMenuOpen ? 'is-open' : ''}>
         <Links>
           <LinkItem>
-            <Link to="/categories">Categorias</Link>
+            <Link
+              title="Clique aqui para ver as categorias"
+              to="/categories"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Categorias
+            </Link>
           </LinkItem>
           <LinkItem>
-            <a href="/#coming-soon">Novidades</a>
+            <Link
+              title="Clique aqui para ver as novidades"
+              to="/#coming-soon"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Novidades
+            </Link>
           </LinkItem>
           <LinkItem>
-            <a href="/#on-sale">Promoções</a>
+            <Link
+              title="Clique aqui para ver as promoções"
+              to="/#on-sale"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Promoções
+            </Link>
           </LinkItem>
         </Links>
       </NavMobile>

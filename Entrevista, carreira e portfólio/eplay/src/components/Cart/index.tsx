@@ -56,7 +56,7 @@ const Cart = () => {
         <Prices>
           Total de {getTotalPrice()} <span>em até 6x sem juros</span>
         </Prices>
-        <Button title="Continuar com a compra" type="button">
+        <Button title="Continuar com a compra" type="link" to="/checkout">
           continuar com a compra
         </Button>
       </Sidebar>

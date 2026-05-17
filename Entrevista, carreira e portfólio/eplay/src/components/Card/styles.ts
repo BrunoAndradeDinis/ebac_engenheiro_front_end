@@ -15,6 +15,10 @@ export const Container = styled.div`
     margin-bottom: 24px;
   }
 
+  h1 {
+    margin-bottom: 24px;
+  }
+
   .margin-top {
     margin-top: 24px;
   }

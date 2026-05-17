@@ -20,23 +20,23 @@ const Button = ({
   children,
   variant = 'primary'
 }: ButtonProps) => {
-  if (type === 'button') {
+  if (type !== 'button') {
     return (
-      <ButtonContainer
-        type={buttonType}
-        title={title}
-        onClick={onClick}
-        $variant={variant}
-      >
+      <ButtonLink type="link" title={title} to={to as string}>
         {children}
-      </ButtonContainer>
+      </ButtonLink>
     )
   }
 
   return (
-    <ButtonLink type="link" title={title} to={to as string}>
+    <ButtonContainer
+      type={buttonType === 'submit' ? 'submit' : 'button'}
+      title={title}
+      onClick={onClick}
+      $variant={variant}
+    >
       {children}
-    </ButtonLink>
+    </ButtonContainer>
   )
 }
 

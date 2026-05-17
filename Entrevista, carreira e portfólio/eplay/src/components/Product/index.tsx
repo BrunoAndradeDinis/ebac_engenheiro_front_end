@@ -27,15 +27,21 @@ const Product = ({
     return description
   }
 
+  const getTitle = (title: string) => {
+    if (title.length > 30) {
+      return title.slice(0, 27) + '...'
+    }
+    return title
+  }
   return (
-    <Card to={`/product/${id}`}>
+    <Card title={`Clique aqui para ver o jogo: ${title}`} to={`/product/${id}`}>
       <img src={imageUrl} alt={title} />
       <Infos>
         {infos.map((info, index) => (
           <Tag key={index}>{info}</Tag>
         ))}
       </Infos>
-      <Titulo>{title}</Titulo>
+      <Titulo>{getTitle(title)}</Titulo>
       <Tag>{category}</Tag>
       <Tag>{system}</Tag>
       <Descricao>{getDescription(description)}</Descricao>
